@@ -6,7 +6,7 @@ SECRET_KEY = '1_8pekirv-*n4%s@^8^_br!9yj08ztou@7=%il!-d03=1bthzj'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','consultcounsel.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','consultcounsel.herokuapp.com','www.consultandcounsel.com']
 
 INSTALLED_APPS = [
     'forum',
