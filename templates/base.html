@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching advice Artist dancer musician teacher professional doctor writter sketch artist healthworker counselling best in india consulting session video lecture video session">
+    <meta name="description" content="consult and counsel bring you the best consulting and counselling services in the field of Dance,Music,Art,Paint,Sketch,Education,Teaching,Health,Corporate,Writtings and many more">
+    <meta name="description" content="We bring you the best consulting and counselling services irrespective of field with the help of renowned professionals in that particular concerned area">
+    <style>
+        img {
+            border-radius: 8px;
+            vertical-align: middle;
+        }
+        video {
+            border-radius: 8px;
+        }
+        h1{
+            font-size:14px;
+            font-weight:400;
+            font-family: "Arial";
+            margin-top:5px;
+        }
+        a:link{
+            color:#800000;
+        }
+        a:visited {
+            color: #800000;
+        }
+        button {
+            border-radius: 0;
+            color:black;
+        }
+        .dropbtn {
+            background-color: #24a0ed;
+            color: blue;
+            height: 50px;
+            width: 90px;
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 120px;
+            max-width:160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 8px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color:;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color:#5159c9;
+        }
+        .mySlides {
+            display: none;
+        }
+        .slideshow-container {
+            max-width: 1000px;
+            max-height:600px;
+            position: relative;
+            margin: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .text {
+            color: #04010f;
+            font-size: 25px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2s;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+        }
+        @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+        }
+        @media only screen and (max-width: 300px) {
+        .prev, .next,.text {
+            font-size: 11px
+        }
+        }
+        .mm{
+            font-family: "Sofia";
+            font-size: 22px;
+        }
+        .lll{
+            background-color:white;
+        }
+        .kkk{
+            background-color:#ccebff;
+        }
+        .kk{
+            font-family: "Arial";
+            font-size: 20px;
+        }
+        .kl{
+            font-family: "Arial";
+            font-size: 22px;
+            background-color:#FFE933;
+        }
+        .lkp{
+            font-family: "Arial";
+            font-size: 18px;
+            background-color:#A6ACAF;
+        }
+        .ll{
+            background-color:white;
+        }
+        .pox{
+            text-align:center;
+        }
+        .llm{
+            background-color:#F0F8FF;
+        }
+        .lk{
+            background-color:#DDA0DD;
+        }
+        .ch{
+            border-radius: 50%;
+            height: 300px;
+        }
+        .cs{
+            background-color:#bfff80;
+        }
+        .cv{
+            background-color:#78F57A;
+        }
+        .cc{
+            color:red;
+        }
+        .tox{
+            font-family: "Sofia";
+            font-size: 22px;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>Consult&Counsel</title>
+</head>
+<body>
+    <div class="container-fluid ll">
+        <div class="row justify-content-around">
+            <div class="col-sm-12">
+                <a href="/"><img src="{% static 'pp.jpeg'%}" alt="Avatar" width="100%" height="120%"></a>
+            </div>
+        </div><br>
+        <div class="row justify-content-around">
+            <div class="col-xs-1">
+                <div class="dropdown">
+                    <button class="dropbtn btn btn-primary">MENTORS</button>
+                    <div class="dropdown-content">
+                        <a href="mentors">ALL</a>
+                        <a href="art">ART</a>
+                        <a href="dancer">DANCE</a>
+                        <a href="musician">MUSIC</a>
+                        <a href="education">EDUCATION</a>
+                        <a href="fashion">FASHION</a>
+                        <a href="professional">PROFESSIONAL</a>
+                        <a href="fitness">FITNESS</a>
+                        <a href="vlogger">BLOGGING</a>
+                        <a href="others">OTHERS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="dropdown">
+                    <a href="session"><button class="dropbtn btn btn-primary">SESSION</button></a>
+                    <div class="dropdown-content">
+                        <a href="session">BOOK SESSION</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+               <div class="dropdown">
+                    <a href="virtualcourt"><button class="dropbtn btn btn-primary">COURT</button></a>
+                     <div class="dropdown-content">
+                        <a href="virtualcourt">FILE A CASE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="dropdown">
+                    <a href="volunter"><button class="dropbtn btn btn-primary">REGISTER</button></a>
+                    <div class="dropdown-content">
+                        <a href="volunter">JOIN AS A MENTOR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="dropdown">
+                    <button class="dropbtn btn btn-primary">ACCOUNT</button>
+                    <div class="dropdown-content">
+                        <a href="login">LOGIN</a>
+                        <a href="signup">SIGNUP</a>
+                        <a href="account">PROFILE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+               <div class="dropdown">
+                    <a href="hireme"><button class="dropbtn btn btn-primary">HIRING</button></a>
+                    <div class="dropdown-content">
+                        <a href="hireme">HIRE AN EXPERT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="startnow"><button class="dropbtn btn btn-primary">COURSE</button></a>
+                <div class="dropdown-content">
+                        <a href="startnow">BOOK NOW</a>
+                    </div>
+            </div>
+            <div class="col-xs-1">
+                <div class="dropdown">
+                    <a href="testimony"><button class="dropbtn btn btn-primary">SOLUTION</button></a>
+                    <div class="dropdown-content">
+                        <a href="itsolution">DIGITAL SOLUTION</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {% block content%}
+    {% endblock content%}
+    <br>
+    <div class="container-fluid ll">
+        <a href="https://www.amazon.in/tryprime?tag=consultandcou-21"><img src="{% static 'amazonprime.jpg'%}" alt="Avatar" width="100%" height=auto></a>
+    <div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <a href="iimcalcutta-project"><h4>IIM-Calcutta report on Consult&Counsel.Check here </p></a>
+        </div>
+    </div>
+    <div class="container-fluid llm">
+        <div class="row">
+            <div class="col-md-2 pox">
+                <p class="kl">Legal</p>
+                <a href="privacy"><p class="kk">Privacy</P></a>
+                <a href="policy"><p class="kk">Policy</P></a>
+                <a href="about"><p class="kk">About us</p></a>
+            </div>
+            <div class="col-md-2 pox">
+                <p class="kl">Links</p>
+                <a href="support"><p class="kk">Contact us</P></a>
+                <a href="career"><p class="kk">Career</P></a>
+                <a href="donation"><p class="kk">Donation</P></a>
+            </div>
+            <div class="col-md-2 pox">
+                <p class="kl">Partners</p>
+                <a href="https://vishuddhiyogastudio.business.site/?utm_source=gmb&utm_medium=referral"><p class="kk">Vishuddhi Yoga Studio</p></a>
+                <a href="https://thehrsuite.wixsite.com/thehrsuite"><p class="kk">The HR Suite</a>
+            </div>
+            <div class="col-md-3 pox">
+                <p class="kl">Social account</p>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="https://m.facebook.com/Consult-Counsel-117588793422169/"><i class="fab fa-facebook-square" style="font-size: 2.73em"></i></a>
+                        <a href="https://www.linkedin.com/company/69157452/"><i class="fab fa-linkedin" style="font-size: 2.73em"></i></a>
+                        <a href="https://www.instagram.com/consultandcounsel/"><i class="fab fa-instagram-square" style="font-size: 2.83em"></i></a>
+                        <a href="https://www.youtube.com/channel/UC3PZOeQZcXvyN6J83LztqIg"><i class="fab fa-youtube-square" style="font-size: 2.83em"></i></a>
+                    </div><br>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-sm-8"><br>
+                        <a href="feedback"><p class="kk pox">Feedback</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pox">
+                <p class="kl">Office address</p>
+                <i class='fas fa-home' style='font-size:25px'></i>
+                <p class="kk sl">Ejipura,Kormangala,Bangalore</p>
+                <p class="kk sl">Railway colony,Ramagundam,Telangana</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>EDITPROFILE</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h3 class="pox">Edit profile</h3>
+                <form  method="POST" class="form-group" action="">
+                    {%csrf_token%}
+                    {% for t in data%}
+                    <h5 class="kk">{{t.label_tag}} {{t}}</h5>
+                    {% endfor %}
+                    <button class="btn btn-success" type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup best">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>SESSION</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h3 class="pox kl">GET NOW</h3>
+                <img src="{% static 'itsolution.jpg'%}" width="100%" height="auto">
+                <p  class="kk">We offer the digital solution of real life problems. We make website of your choice and application(android or ios) that you love.So if you want to start your bussiness today and want to launch it to the market,
+                    then we are the one step solution to launch it into internet through website and application. Contact us through phone or email.(sumanpatra68@gmail.com or 7750048275).
+                </p>
+                <div class="pox"><a href="digital"><button class="btn btn-dark">BOOK YOUR SESSION</button></a></div>
+            </div><br>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

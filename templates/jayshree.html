@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>MENTOR</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="{% static 'jayshreeg.jpeg'%}" width="100%" height="35%"><br>
+                <h3 class="pox">G Jayasree</h3>
+                <h3 class="pox">Fashion designer</h3>
+                <h3 class="pox">gnshjayasree5@gmail.com</h3>
+                <p class="kk pox">
+                    Hey!! I am a fashion designer and pursuing post graduate in fashion management. I have always been associated with colours, art , design and making clothes from a very young age. I feel communicating my thoughts through colours and fabrics speaks stronger than words.
+                    Fashion is one platform which has no defined direction. It's that Direction I go by my ideas and thoughts taking creative shapes. Studying fashion and pursuing a career has so many opportunities and columns to work in. It's not only that glam we see from one side.
+                    A lot of thoughts,hard work, craftsmanship, effort and time goes into it.
+                    I believe it's always right to fit in a space where you belong, only then it makes more sense.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

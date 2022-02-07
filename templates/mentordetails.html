@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup best">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>SESSION</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h3 class="pox kl">Have a look</h3>
+                    <img src="{% static 'mentor_home.jpg'%}" width="100%" height="auto">
+                    <p  class="kk clo">
+                        A mentor is a person or friend who guides a less experienced person by building trust and modeling positive behaviors. An effective mentor understands that his or her role is to be dependable, engaged, authentic, and tuned into the needs of the mentee.
+                        The word mentor comes from the character "Mentor" in Homer's epic tale, The Odyssey. Mentor was a trusted friend of Odysseus, the king of Ithaca. When Odysseus fought in the Trojan War, Mentor served as friend and counsel to Odysseus' son Telemachus. Riverside Webster’s II New College Dictionary 1995 defines a mentor as “a wise and trusted teacher or counselor”. The act of mentoring is a series of ongoing and little successes.  You will be able to make a real impact through consistent and ongoing relationship building
+                    </p>
+                   <a href="mentors"><div class="pox"><button class="btn btn-warning">MENTORS</button></div></a>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>MENTOR</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="{% static 'oshi.jpg'%}" width="100%" height="25%"><br>
+                <h3 class="pox">sk oshi</h3>
+                <h3 class="pox">Lifestyle counsellor</h3>
+                <h3 class="pox">skoshi520@gmail.com</h3>
+                <p class="kk pox">
+                    Hello, My name is Shaikh Oshi, and I am a Software Engineer by profession and a part-time Life and spirituality coach who knows the struggle of trying to balance a career and family. In my coaching practice, I provide the tools, strategy, and support to help people create meaningful change in their lives.
+                    In my free time, I am a community volunteer, hiker, traveler, yogi, compassion, and mindfulness practitioner.
+                    I love my work because helping people be successful and fulfilled is deeply meaningful to me. I struggled with the same challenges my clients face. I am very familiar with the pressure of job deadlines, family obligations, and feelings of inadequacy. I get it. I know there is a better way.
+                    Coaching transformed my life. It is my life's purpose to help people create a life they are proud of.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

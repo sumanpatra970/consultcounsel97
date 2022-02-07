@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>PLAN</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h3 class="pox cv">STEP 2 OF 3</h3>
+                <p class="kk pox">CHOOSE YOUR PLAN</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 pox">
+                <p class="kk lk">Plan-1</p>
+                <p class="kk">Price:150</p>
+                <p class="kk">1 consultation call</p>
+                <p class="kk">1 followup call</p>
+                <a href="step3"><button class="btn btn-dark">SELECT PLAN</button></a>
+            </div>
+            <div class="col-sm-4 pox">
+                <p class="kk lk">Plan-2</p>
+                <p class="kk">Price:275</p>
+                <p class="kk">2 consultation call</p>
+                <p class="kk">2 followup call</p>
+                <p class="kk">Material support</p>
+                <a href="step3"><button class="btn btn-dark">SELECT PLAN</button></a><br>
+            </div>
+            <div class="col-sm-4 pox">
+                <p class="kk lk">Plan-3</p>
+                <p class="kk">Price:400</p>
+                <p class="kk">4 Consultation call</p>
+                <p class="kk">2 followup call</p>
+                <p class="kk">24*7 support</p>
+                <p class="kk">Material support</p>
+                <a href="step3"><button class="btn btn-dark">SELECT PLAN</button></a><br>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

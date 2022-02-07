@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>CAREER</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="pox cs">Digital market expert</h3>
+                <p class="kk pox">
+                    We are hiring a candidate who has experience of one year in digital marketing.
+                    SEO knowledge is must. Candidate having knowledge of website design will be prefered.
+                </p>
+                <p class="pox kk">Speciality: Blogging, Content Marketing, Online Marketing</p>
+                <p class="pox kk">job code:CC0001</p>
+                <div class="pox">
+                    <a href="CC001"><button class="btn btn-dark">Apply now</button></a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="pox cs">Customer executive</h3>
+                <p class="kk pox">
+                    We are hiring a candidate who has experience of one year in customer support.
+                    Good communication skill,Email writing skill and team work skill is must.
+                </p>
+                <p class="kk pox">Speciality: Excellent communication skill</p>
+                <p class="kk pox">job code:CC0002</p>
+                <div class="pox">
+                    <a href="CC002"><button class="btn btn-dark">Apply now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

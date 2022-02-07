@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>TRANSCATION</title>
+</head>
+<body>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h4 class="pox">Payment Status : {{ status }}</h4>
+                <h5 class="pox">Transcation_id: {{x}}</h5>
+                <h5 class="pox">Order_id: {{y}}</h5>
+                <a href="/"><h5 class="pox">Home page</h5></a>
+                <h5 class="pox">If your payment is successful,we will call you</h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

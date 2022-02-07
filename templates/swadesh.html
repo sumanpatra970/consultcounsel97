@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>MENTOR</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="{% static 'swadesh.jpg'%}" width="100%" height="35%"><br>
+                <h3 class="pox">Swadesh</h3>
+                <h3 class="pox">NGO Program manager</h3>
+                <h3 class="pox"></h3>
+                <p class="kk pox">
+                    I am working as a Programme Manager in a reputed NGO in Odisha since last 3 years. I took the decision of joining the development sector to start my career and help make this world a better place, after completing my BTech in Information Technology from Veer Surendra Sai University of Technology, Burla.
+                    I have taken part and led of a number of student-driven initiatives working in the field of primary education, child labour, blood donation drives, etc during my student life. Now I am working in the field of Child Rights, Rural Development, Elementary Education, Women Empowerment and various in Community based projects.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>Coupon</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="cc"><h4>Your coupon code is : {{coupon}}</h4></div>
+                <h4>Note:1.Coupon code is applicable for only once.</h4>
+                <h4>2.Put this coupon code in referedby section of form to avail 30% OFF.</h4>
+                <h4>For any query just give us a call in 7750048275 number.</h4>
+                <h4>Thank you so much for visiting site.</h4>
+                <div class="pox"><a href="/"><button class="btn btn-dark">Home</button></a></div>
+            </div>
+        </div>
+    </div><br>
+    {% endblock content %}
+</body>
+</html>

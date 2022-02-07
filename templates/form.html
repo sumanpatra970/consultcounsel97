@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>FORM</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form class="form-group" method="POST" action="paydirect">
+                    <label for="fname"><h5>First name:</h5></label><br>
+                    <input type="text" id="fname" name="fname" class="form-control">
+                    <label for="lname"><h5>Last name:</h5></label><br>
+                    <input type="text" id="lname" name="lname" class="form-control">
+                    <label for="mobile"><h5>Mobile no:</h5></label><br>
+                    <input type="text" id="mobile" name="mobile" class="form-control">
+                    <label for="email"><h5>Email id:</h5></label><br>
+                    <input type="text" id="email" name="email" class="form-control"><br>
+                    <label for="emaill"><h5>Refered by:</h5></label><br>
+                    <input type="text" id="email" name="emaill" class="form-control"><br>
+                    <button type="submit" class="btn btn-success">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>ABOUT/SUMAN</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row"><br>
+            <div class="col-sm-2 pox"><img src="{% static 'suman.jpg'%}" width="300" height="300"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+                <h3 class="pox">Associate software engineer</h3>
+                <h4 class="pox">Employee at Wipro</h4>
+                <p class="kk pox">Suman is from Jajpur Odisha but currently staying at Bangalore and has done his engineering from Odisha's reputed college VSSUT.
+                    He is currently a software engineer at Wipro Hyderabad with 1+ years of experience. He works as a mentor in different colleges apart from his work. He always passionate about the solving real time problems with technology.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>MENTOR</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="{% static  'rashmi.jpg'%}" width="100%" height="30%"><br>
+                <h3 class="pox">Rashmi</h3>
+                <h3 class="pox">Urban and Regional planning Expert</h3>
+                <h3 class="pox"></h3>
+                <p class="kk pox">
+                    I am a graduate of Urban and Regional Planning from Maulana Azad National Institute of Technology, Bhopal,
+                    I graduated in the year 2019. My decision to pursue Urban and Regional Planning stems from the curiosity to understand places and people and
+                    Being from India which is currently amid issues pertaining to spatial planning and drowning with social and environmental challenges boosted my will to choose this field.
+                    Throughout my bachelor’s we a had number of projects which exposed me to a wide range of subjects from sociology,
+                    Environmental studies, Physical Planning, Economic Development, Transportation Planning & Management. Urban Planning being a broad subject dealing with various aspects
+                    I have been able to explore a wide range of subjects. After my graduation, I started working in Indian Institute for Human Settlements, Bangalore, where my work revolved around research,
+                    content development and map creations for several projects.
+                    I am interested in research work, where I get to integrate multidisciplinary fields.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>
