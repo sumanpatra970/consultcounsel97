@@ -1,2 +1,2 @@
-web: gunicorn career.wsgi:app
+web: gunicorn career.wsgi
 release: python manage.py migrate
