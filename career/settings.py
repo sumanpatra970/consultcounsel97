@@ -1,5 +1,9 @@
 import os
 
+
+
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '1_8pekirv-*n4%s@^8^_br!9yj08ztou@7=%il!-d03=1bthzj'
@@ -55,7 +59,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+db_from_env = dj_database_url.config(conn_max_age=600)
 
+DATABASES['default'].update(db_from_env)
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
