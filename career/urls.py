@@ -4,10 +4,11 @@ from forum import  views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ads.txt', views.plain_text_view, name='ads'),
     path('',views.home),
     path('signup',views.signup),
     path('account',views.account),
@@ -215,7 +216,11 @@ urlpatterns = [
     path('calling',views.lastonly),
     path('radha',views.radha),
     path('itsolution',views.itsolution),
-    path('digital',views.booksession)
+    path('digital',views.booksession),
+     path(
+        "ads.txt",
+        RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),
+    ),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

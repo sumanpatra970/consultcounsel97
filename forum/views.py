@@ -10,12 +10,15 @@ from django.contrib import auth
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 import razorpay
+from django.views import View
 
-def plain_text_view(request):
-    file = open('career/ads.txt', 'r')
-    content = file.read()
-    file.close()
-    return HttpResponse(content, content_type='text/plain')
+class AdsView(View):
+    """Replace pub-0000000000000000 with your own publisher ID"""
+    line  =  "google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0"
+    def get(self, request, *args, **kwargs):
+        return HttpResponse(line)
+
+
 
 def home(request):
     return render(request,'home.html')
