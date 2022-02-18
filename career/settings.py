@@ -94,6 +94,8 @@ STATIC_URL = '/static/'
 
 staticfile=os.path.join(BASE_DIR,'staticfiles')
 
+x=5; 
+
 STATICFILES_DIRS=[staticfile]
 
 
