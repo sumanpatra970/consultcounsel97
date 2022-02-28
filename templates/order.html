@@ -21,17 +21,19 @@
             <div class="col-sm-4">
                 <form action="confirm_order" method="POST" class="form-group">{% csrf_token %}
                     <h3 class="pox">Creating order</h3>
-                    <div><label><h5 class="kk">Name</h5></label><input type="text" name="name" required class="form-control"></div>
-                    <div><label><h5 class="kk">Mobile no</h5></label><input type="text" name="phone" required class="form-control"></div>
-                    <div><label><h5 class="kk">Email</h5></label><input type="email" name="email" required class="form-control"></div>
-                    <div><label><h5 class="kk">Reffered by:</h5></label><input type="text" name="refer" required class="form-control"></div>
-                    <div><label><h5 class="kk">Write your concern:</h5></label><input type="text" name="concern" required class="form-control"></div>
-                    <label for="plan"><h5 class="kk">Choose a Plan:</h5></label>
+                    <div class="suppy"><label><h5 class="kk puppy">Name</h5></label><input type="text" name="name" required class="form-control"></div>
+                    <div class="suppy"><label><h5 class="kk puppy">Mobile no</h5></label><input type="text" name="phone" required class="form-control"></div>
+                    <div class="suppy"><label><h5 class="kk puppy">Email</h5></label><input type="email" name="email" required class="form-control"></div>
+                    <div class="suppy"><label><h5 class="kk puppy">Reffered by:</h5></label><input type="text" name="refer" required class="form-control"></div>
+                    <div class="suppy"><label><h5 class="kk puppy">Write your concern:</h5></label><input type="text" name="concern" required class="form-control"></div>
+                    <div class="suppy"><label for="plan"><h5 class="kk puppy">Choose a Plan:</h5></label>
                     <select name="plan" id="plan" class="form-control">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    </select><br>
+                    </select>
+                </div>
+                    <br>
                     <button type="submit" class="btn btn-dark">SUBMIT</button>
                 </form>
             </div>
