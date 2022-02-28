@@ -29,7 +29,7 @@
                 <form method="POST" action="qr" class="form-group">
                     {% csrf_token %}
                     <h3 class="pox">Creating order</h3>
-                    <div class="puppy"><label><h5 class="kk">Name</h5></label><input type="text" name="name" required class="form-control" value={{name}}></div>
+                    <div><label><h5 class="kk puppy">Name</h5></label><input type="text" name="name" required class="form-control" value={{name}}></div>
                     <div><label><h5 class="kk">Mobile no</h5></label><input type="text" name="phone" required class="form-control"></div>
                     <div><label><h5 class="kk">Email</h5></label><input type="email" name="email" required class="form-control"></div>
                     <div><label><h5 class="kk">Refered by:</h5></label><input type="text" name="refer" required class="form-control"></div>
