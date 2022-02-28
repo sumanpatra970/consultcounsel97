@@ -14,10 +14,7 @@
     <link rel="icon" href="{% static 'COUNC.jpeg' %}">
     <title>DIRECTPAY</title>
     <style>
-    .puppy{
-        margin:0px;
-        padding:0px;
-    }
+    
 </style>
 </head>
 <body>
@@ -28,7 +25,7 @@
             <div class="col-md-4">
                 <form method="POST" action="qr" class="form-group">
                     {% csrf_token %}
-                    <h3 class="pox">Creating order na</h3>
+                    <h3 class="pox">Creating order</h3>
                     <div><label><h5 class="kk puppy">Name</h5></label><input type="text" name="name" required class="form-control" value={{name}}></div>
                     <div><label><h5 class="kk">Mobile no</h5></label><input type="text" name="phone" required class="form-control"></div>
                     <div><label><h5 class="kk">Email</h5></label><input type="email" name="email" required class="form-control"></div>
