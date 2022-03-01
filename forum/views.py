@@ -279,7 +279,7 @@ def create_order(request):
         if product == "1":
             order_amount = 15000
         elif product == '2':
-            order_amount = 275000
+            order_amount = 30000
         elif product == '3':
             order_amount = 40000
         else:
@@ -330,7 +330,7 @@ def payment_status(request):
         return render(request, 'order_summary.html', {'status': 'Payment Faliure!!!'})
 
 def directpay(request):
-    name=request.user;
+    name=request.user
     return render(request,'directpay.html',{'name':name,'request':request})
 
 def direct(request):
@@ -346,7 +346,7 @@ def direct(request):
         if plan==1:
             Amount=150
         elif plan==2:
-            Amount=275
+            Amount=300
         else:
             Amount=400
         x=Primemember.objects.create(Name=username,Mobileno=mobileno,Email=email,Plan=plan,Refered=refer,Query=concern)
@@ -356,7 +356,7 @@ def direct(request):
         transaction.save()
         send_mail(
         'counsultandcounsel',
-            'Admin,A new prime member is added by Direct Pay. Please check.',
+            'Admin, A new prime member is added by Direct Pay. Please check.',
             settings.EMAIL_HOST_USER,
             ['sumanpatra68@gmail.com',
             'bhanup997@gmail.com'],
@@ -460,7 +460,27 @@ def scan(request):
     return render(request,'scan.html')
 
 def directpayy(request):
-    return render(request,'dp.html')
+    if request.method == "GET":
+        return render(request, 'dp.html')
+    else:
+        username = request.POST['name']
+        mobileno = request.POST['phone']
+        email = request.POST['email']
+        amount = int(request.POST['amount'])
+        x=Donation.objects.create(Name=username,Mobileno=mobileno,Email=email,Amount=amount)
+        x.save()
+        order_id=username+str(plan)+"dpscan_rt_spl"
+        transaction = Transaction.objects.create(made_by=username, amount=amount,order_id=order_id)
+        transaction.save()
+        send_mail(
+        'counsultandcounsel',
+            'Admin, A new prime member is added by Direct Pay. Please check.',
+            settings.EMAIL_HOST_USER,
+            ['sumanpatra68@gmail.com',
+            'bhanup997@gmail.com'],
+            fail_silently=False
+            )
+        return render(request,'scan.html',{'amount':amount})
 
 def testimony(request):
     return render(request,'testimony.html')
