@@ -1,10 +1,10 @@
 from django.db import models
 
 class Forum_table(models.Model):
-    question = models.CharField(max_length=100,default="NA")
-    email = models.CharField(max_length=100,default="NA")
+    question = models.CharField(max_length=100,default="")
+    email = models.CharField(max_length=100,default="")
     answer = models.TextField(max_length=2000,blank=True)
-    answer_set = models.TextField(max_length=2000,default="NA",blank=True)
+    answer_set = models.TextField(max_length=2000,default="",blank=True)
     made_on = models.DateTimeField(auto_now_add=True)
 
 class Transaction(models.Model):
@@ -20,34 +20,34 @@ class Transaction(models.Model):
         return super().save(*args, **kwargs)
 
 class Mentor(models.Model):
-    Name = models.CharField(max_length=100,default="NA",blank=False)
-    Mobileno = models.CharField(max_length=100,blank=False,default="NA")
-    Email = models.CharField(max_length=100,blank=False,default="NA")
-    Profession = models.CharField(max_length=200,default="NA",blank=True)
-    Mentor_Img = models.ImageField(upload_to='',default="NA",blank=True)
+    Name = models.CharField(max_length=100,default="",blank=False)
+    Mobileno = models.CharField(max_length=100,blank=False,default="")
+    Email = models.CharField(max_length=100,blank=False,default="")
+    Profession = models.CharField(max_length=200,default="",blank=True)
+    Mentor_Img = models.ImageField(upload_to='',default="",blank=True)
     made_on = models.DateTimeField(auto_now_add=True)
 
 class Donation(models.Model):
-    Name = models.CharField(max_length=90,default="NA")
-    Email = models.CharField(max_length=50,blank=True,default="NA")
+    Name = models.CharField(max_length=90,default="")
+    Email = models.CharField(max_length=50,blank=True,default="")
     Date = models.DateTimeField(auto_now_add=True)
     Amount = models.IntegerField(default=100)
-    Mobileno = models.CharField(max_length=100,default="NA",blank=True)
+    Mobileno = models.CharField(max_length=100,default="",blank=True)
     made_on = models.DateTimeField(auto_now_add=True)
 
 class Primemember(models.Model):
     Name = models.CharField(max_length=50,blank=False)
     Email = models.CharField(max_length=50,blank=False)
     Mobileno = models.CharField(max_length=50,blank=False)
-    Refered = models.CharField(max_length=20,default="NA",blank=False)
-    Plan = models.CharField(max_length=20,default="NA")
-    Query = models.CharField(max_length=100,blank=False,default="NA")
+    Refered = models.CharField(max_length=20,default="",blank=False)
+    Plan = models.CharField(max_length=20,default="")
+    Query = models.CharField(max_length=100,blank=False,default="")
     made_on = models.DateTimeField(auto_now_add=True)
 
 class Feedback(models.Model):
-    Name = models.CharField(max_length=30,default="NA")
-    Email = models.CharField(max_length=50,default="NA")
-    Query = models.CharField(max_length=500,default="NA")
+    Name = models.CharField(max_length=30,default="")
+    Email = models.CharField(max_length=50,default="")
+    Query = models.CharField(max_length=500,default="")
     made_on = models.DateTimeField(auto_now_add=True)
 
 class transcatid(models.Model):
@@ -56,50 +56,50 @@ class transcatid(models.Model):
     transcation_id = models.CharField(unique=True, max_length=100, null=True, blank=True)
 
 class course_info(models.Model):
-    name = models.CharField(max_length=30,default="NA",null=True)
+    name = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    email = models.CharField(max_length=30,default="NA",null=False)
-    mobile = models.CharField(max_length=30,default="NA",null=False)
+    email = models.CharField(max_length=30,default="",null=False)
+    mobile = models.CharField(max_length=30,default="",null=False)
     Refered = models.CharField(max_length=20,default="NA",null=True)
 
 class hiring_mentor(models.Model):
-    name = models.CharField(max_length=30,default="NA",null=True)
+    name = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    email = models.CharField(max_length=30,default="NA",null=True)
-    mobile = models.CharField(max_length=30,default="NA",null=True)
-    area = models.CharField(max_length=20,default="NA",null=True)
+    email = models.CharField(max_length=30,default="",null=True)
+    mobile = models.CharField(max_length=30,default="",null=True)
+    area = models.CharField(max_length=20,default="",null=True)
 
 class coupon(models.Model):
-    email = models.CharField(max_length=30,default="NA",null=True)
+    email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    mobile = models.CharField(max_length=30,default="NA",null=True)
-    finalcoupon = models.CharField(max_length=30,default="NA",null=True)
+    mobile = models.CharField(max_length=30,default="",null=True)
+    finalcoupon = models.CharField(max_length=30,default="",null=True)
 
 class free_sessionform(models.Model):
-    email = models.CharField(max_length=30,default="NA",null=True)
+    email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    mobile = models.CharField(max_length=30,default="NA",null=True)
-    name = models.CharField(max_length=30,default="NA",null=True)
-    field = models.CharField(max_length=30,default="NA",null=True)
-    doubt = models.CharField(max_length=300,default="NA",null=True)
+    mobile = models.CharField(max_length=30,default="",null=True)
+    name = models.CharField(max_length=30,default="",null=True)
+    field = models.CharField(max_length=30,default="",null=True)
+    doubt = models.CharField(max_length=300,default="",null=True)
 
 class internship(models.Model):
-    email = models.CharField(max_length=30,default="NA",null=True)
+    email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    mobile = models.CharField(max_length=30,default="NA",null=True)
-    name = models.CharField(max_length=30,default="NA",null=True)
-    field = models.CharField(max_length=30,default="NA",null=True)
+    mobile = models.CharField(max_length=30,default="",null=True)
+    name = models.CharField(max_length=30,default="",null=True)
+    field = models.CharField(max_length=30,default="",null=True)
     cv = models.FileField(blank=True, upload_to='cv')
 
 class Court(models.Model):
-    email = models.CharField(max_length=30,default="NA",null=True)
+    email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    mobile = models.CharField(max_length=30,default="NA",null=True)
-    name = models.CharField(max_length=300,default="NA",null=True)
-    location = models.CharField(max_length=300,default="NA",null=True)
+    mobile = models.CharField(max_length=30,default="",null=True)
+    name = models.CharField(max_length=300,default="",null=True)
+    location = models.CharField(max_length=300,default="",null=True)
 
 class solution(models.Model):
-    email = models.CharField(max_length=30,default="NA",null=True)
+    email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
-    mobile = models.CharField(max_length=30,default="NA",null=True)
-    name = models.CharField(max_length=300,default="NA",null=True)
+    mobile = models.CharField(max_length=30,default="",null=True)
+    name = models.CharField(max_length=300,default="",null=True)
