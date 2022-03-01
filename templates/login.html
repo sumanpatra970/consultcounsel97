@@ -25,8 +25,8 @@
                 <form class="form-group" action="login" method="POST">
                     {% csrf_token %}
                     {%for i in fm%}
-                    <h5 class="kk">{{ i.label }}</h5>
-                    <h5 class="kk">{{ i }}{{i.errors|striptags}}</h5>
+                    <h5 class="kk puppy">{{ i.label }}</h5>
+                    <h5 class="kk puppy">{{ i }}{{i.errors|striptags}}</h5>
                     {%endfor%}
                     <button type="submit" class="btn btn-success">SUBMIT</button>
                 </form>
