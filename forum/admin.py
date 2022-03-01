@@ -8,7 +8,7 @@ class forum_tab(admin.ModelAdmin):
     list_display = ['made_on','question','email','answer','answer_set']
 
 class Donor(admin.ModelAdmin):
-    list_display = ['made_on','Name','Email','Date','Amount','Mobileno']
+    list_display = ['made_on','Name','Email','Amount','Mobileno']
 
 class mentor(admin.ModelAdmin):
     list_display = ['made_on','Name','Email','Mobileno','Profession','Mentor_Img']
