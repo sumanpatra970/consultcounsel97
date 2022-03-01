@@ -467,7 +467,7 @@ def directpayy(request):
         mobileno = request.POST['phone']
         email = request.POST['email']
         amount = int(request.POST['amount'])
-        x=Donation.objects.create(Name=username,Mobileno=mobileno,Email=email,Amount=amount,Date="22.02")
+        x=Donation.objects.create(Name=username,Mobileno=mobileno,Email=email,Amount=amount)
         x.save()
         order_id=username+str(plan)+"dpscan_rt_spl"
         transaction = Transaction.objects.create(made_by=username, amount=amount,order_id=order_id)
