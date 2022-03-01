@@ -24,10 +24,10 @@ button {
 .dropbtn {
     background-color: #24a0ed;
     color: blue;
-    height: 50px;
+    height: 40px;
     width: 90px;
-    padding: 20px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 16px;
     border: none;
 }
 .dropdown {
