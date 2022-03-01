@@ -142,7 +142,7 @@ def reply(request,id):
             st=new.cleaned_data['answer']
             y=answer_form()
             v=Forum_table.objects.get(pk=id)
-            v.answer=st;
+            v.answer=st
             v.save()
             t=v.question
             o=v.answer
@@ -970,10 +970,10 @@ def paydirect(request):
     if request.method == 'POST':
         fname = request.POST.get('fname')
         lname= request.POST.get('lname')
-        phone = request.POST.get('phone')
+        phone = request.POST.get('mobile')
         email = request.POST.get('email')
         refered=request.POST.get('emaill')
-        x=course_info.objects.create(name=fname+lname,email=email,Refered=refered,mobile=phone)
+        x=course_info.objects.create(name=fname+lname,email=email,mobile=phone,Refered=refered)
         x.save()
         send_mail(
             'counsultandcounsel',
