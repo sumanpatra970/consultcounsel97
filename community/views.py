@@ -1,29 +1,28 @@
 from django.shortcuts import render
 
-# Create your views here.
 def shree(request):
     return render(request,'shree.html')
 
 def rahul(request):
     return render(request,'rahul.html')
 
-def radhakant(request):
-    return render(request,'radhakant.html')
+def jyoti(request):
+    return render(request,'jyoti.html')
+
+def shashank(request):
+    return render(request,'shashank.html')
 
 def abhijit(request):
     return render(request,'abhijit.html')
+
+def radhakant(request):
+    return render(request,'radhakant.html')
 
 def kavitha(request):
     return render(request,'kavitha.html')
 
 def nivi(request):
     return render(request,'nivi.html')
-
-def shashank(request):
-    return render(request,'shashank.html')
-
-def jyoti(request):
-    return render(request,'jyoti.html')
 
 def sumant(request):
     return render(request,'sumant.html')
@@ -49,8 +48,8 @@ def bikram(request):
 def goutam(request):
     return render(request,'goutam.html')
 
-def shuv(request):
-    return render(request,'shuv.html')
+def shuvayu(request):
+    return render(request,'shuvayu.html')
 
 def shradha(request):
     return render(request,'shradha.html')
@@ -58,8 +57,8 @@ def shradha(request):
 def popin(request):
     return render(request,'popin.html')
 
-def loops(request):
-    return render(request,'loops.html')
+def lopamudra(request):
+    return render(request,'lopamudra.html')
 
 def damini(request):
     return render(request,'damini.html')
@@ -67,8 +66,8 @@ def damini(request):
 def sujata(request):
     return render(request,'sujata.html')
 
-def aayusi(request):
-    return render(request,'aayushi.html')
+def ayushi(request):
+    return render(request,'ayushi.html')
 
 def sukesh(request):
     return render(request,'sukesh.html')
@@ -91,8 +90,8 @@ def jawat(request):
 def manan(request):
     return render(request,'manan.html')
 
-def swapansu(request):
-    return render(request,'sapansu.html')
+def swopnansu(request):
+    return render(request,'swopnanshu.html')
 
 def srimaa(request):
     return render(request,'srimaa.html')
@@ -103,11 +102,11 @@ def abhya(request):
 def anupam(request):
     return render(request,'anupam.html')
 
-def anindya(request):
-    return render(request,'anindya.html')
-
 def krutee(request):
     return render(request,'krutee.html')
+
+def anindya(request):
+    return render(request,'anindya.html')
 
 def sandhya(request):
     return render(request,'sandhya.html')
@@ -139,26 +138,23 @@ def saloni(request):
 def soumya(request):
     return render(request,'soumya.html')
 
-def abhinash(request):
-    return render(request,'abhinash.html')
-
 def hardeek(request):
     return render(request,'hardeek.html')
 
 def deekshith(request):
     return render(request,'deekshith.html')
 
-def bharatendu(request):
-    return render(request,'bharatendu.html')
-
 def animesh(request):
     return render(request,'animesh.html')
 
+def bharatendu(request):
+    return render(request,'bharatendu.html')
+
+def abhinash(request):
+    return render(request,'abhinash.html')
+
 def abhipsa(request):
     return render(request,'abhipsa.html')
-
-def ajay(request):
-    return render(request,'ajay.html')
 
 def amit_patjoshi(request):
     return render(request,'amit_patjoshi.html')
@@ -166,8 +162,11 @@ def amit_patjoshi(request):
 def richa(request):
     return render(request,'richa.html')
 
-def priynka_br(request):
-    return render(request,'priynka_br.html')
+def priynkabrahama(request):
+    return render(request,'priynkabrahama.html')
+
+def ajay(request):
+    return render(request,'ajay.html')
 
 def soumya_prusti(request):
     return render(request,'soumya_prusti.html')
@@ -196,11 +195,11 @@ def prachi(request):
 def sushree(request):
     return render(request,'sushree.html')
 
-def pallavii(request):
-    return render(request,'pallavii.html')
+def ayushidash(request):
+    return render(request,'ayushidash.html')
 
-def ayushi(request):
-    return render(request,'ayushi.html')
+def pallavipriya(request):
+    return render(request,'pallavipriya.html')
 
 def ayush(request):
     return render(request,'ayush.html')
@@ -208,20 +207,20 @@ def ayush(request):
 def anukta(request):
     return render(request,'anukta.html')
 
-def ssn(request):
-    return render(request,'ssn.html')
-
 def nirali(request):
     return render(request,'nirali.html')
 
-def deeja(request):
-    return render(request,'deeja.html')
+def shyama(request):
+    return render(request,'shyama.html')
 
 def deepa(request):
     return render(request,'deepa.html')
 
-def pp(request):
-    return render(request,'pp.html')
+def deeja(request):
+    return render(request,'deeja.html')
+
+def priyankapoetess(request):
+    return render(request,'priyankapoetess.html')
 
 def chetna(request):
     return render(request,'chetna.html')
@@ -241,29 +240,29 @@ def subashis(request):
 def nikhil(request):
     return render(request,'nikhil.html')
 
+def jayesh(request):
+    return render(request,'jayesh.html')
+
 def asmita(request):
     return render(request,'asmita.html')
 
 def trilochan(request):
     return render(request,'trilochan.html')
 
-def jayesh(request):
-    return render(request,'jayesh.html')
-
 def saswat(request):
     return render(request,'saswat.html')
-
-def rishi(request):
-    return render(request,'rishi.html')
 
 def manisha(request):
     return render(request,'manisha.html')
 
+def rishi(request):
+    return render(request,'rishi.html')
+
 def rudra(request):
-    return render(request,'rudraa.html')
+    return render(request,'rudra.html')
 
 def somensoni(request):
-    return render(request,'notfound.html')
+    return render(request,'somensoni.html')
 
 def tannya(request):
     return render(request,'tannya.html')
@@ -275,7 +274,7 @@ def haritha(request):
     return render(request,'haritha.html')
 
 def gangaprasad(request):
-    return render(request,'ganga.html')
+    return render(request,'gangaprasad.html')
 
 def amal(request):
     return render(request,'amal.html')
@@ -283,26 +282,26 @@ def amal(request):
 def oshi(request):
     return render(request,'oshi.html')
 
-def lipsaa(request):
-    return render(request,'lipsaa.html')
-
 def anand(request):
     return render(request,'anand.html')
 
-def werika(request):
-    return render(request,'werika.html')
+def lipsa(request):
+    return render(request,'lipsa.html')
+
+def sanju(request):
+    return render(request,'sanju.html')
 
 def smaroki(request):
     return render(request,'smaroki.html')
 
-def sanju(request):
-    return render(request,'sanju.html')
+def werika(request):
+    return render(request,'werika.html')
 
 def bvaditya(request):
     return render(request,'bvaditya.html')
 
 def srivalli(request):
-    return render(request,'svp.html')
+    return render(request,'srivalli.html')
 
 def ritu(request):
     return render(request,'ritu.html')
@@ -313,11 +312,11 @@ def chiranjeeb(request):
 def boaz(request):
     return render(request,'boaz.html')
 
-def rahul2(request):
-    return render(request,'rahull.html')
-
 def apruba(request):
     return render(request,'apruba.html')
+
+def rahulcyberexpert(request):
+    return render(request,'rahulcyberexpert.html')
 
 def nimai(request):
     return render(request,'nimai.html')
@@ -325,14 +324,14 @@ def nimai(request):
 def sarthak(request):
     return render(request,'sarthak.html')
 
-def suniti(request):
-    return render(request,'suniti.html')
-
 def sushil(request):
     return render(request,'sushil.html')
 
 def sushant(request):
     return render(request,'sushant.html')
+
+def suniti(request):
+    return render(request,'suniti.html')
 
 def raju(request):
     return render(request,'raju.html')
@@ -352,19 +351,19 @@ def utkal(request):
 def akanshya(request):
     return render(request,'akanshya.html')
 
-def manasasu(request):
-    return render(request,'manasasu.html')
+def manasa(request):
+    return render(request,'manasa.html')
 
 def jayshree(request):
     return render(request,'jayshree.html')
 
 def shuvransu(request):
-    return render(request,'sutripathy.html')
+    return render(request,'shuvransu.html')
 
 def chetana(request):
     return render(request,'chetana_mike.html')
 
-def mrvish(request):
+def vishwanath(request):
     return render(request,'vishwanath.html')
 
 def aman(request):
@@ -373,11 +372,11 @@ def aman(request):
 def indu(request):
     return render(request,'indu.html')
 
-def swaraj(request):
-    return render(request,'swaraj.html')
-
 def swadesh(request):
     return render(request,'swadesh.html')
+
+def swaraj(request):
+    return render(request,'swaraj.html')
 
 def kavya(request):
     return render(request,'kavya.html')
