@@ -1003,7 +1003,7 @@ def chetana(request):
     return render(request,'chetana_mike.html')
 
 def mrvish(request):
-    return render(request,'mrvish.html')
+    return render(request,'vishwanath.html')
 
 def aman(request):
     return render(request,'aman.html')
