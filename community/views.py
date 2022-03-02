@@ -351,3 +351,21 @@ def utkal(request):
 
 def akanshya(request):
     return render(request,'akanshya.html')
+
+def manasasu(request):
+    return render(request,'manasasu.html')
+
+def jayshree(request):
+    return render(request,'jayshree.html')
+
+def shuvransu(request):
+    return render(request,'sutripathy.html')
+
+def chetana(request):
+    return render(request,'chetana_mike.html')
+
+def mrvish(request):
+    return render(request,'vishwanath.html')
+
+def aman(request):
+    return render(request,'aman.html')
