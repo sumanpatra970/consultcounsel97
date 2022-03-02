@@ -88,10 +88,7 @@ urlpatterns = [
     path('calling',views.lastonly),
     path('itsolution',views.itsolution),
     path('digital',views.booksession),
-     path(
-        "ads.txt",
-        RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),
-    ),
+    path("ads.txt",RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
