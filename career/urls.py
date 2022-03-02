@@ -75,7 +75,6 @@ urlpatterns = [
     path('sports',views.sports),
     path('privacy',views.privacy),
     path('policy',views.policy),
-    
     path('hireme',views.hireme),
     path('iimcalcutta-project',views.pdf_view),
     path('mentordetails',views.mentordetails),
@@ -87,7 +86,6 @@ urlpatterns = [
     path('bookcourt',views.bookcourt),
     path('lastcall',views.booklast),
     path('calling',views.lastonly),
-    path('radha',views.radha),
     path('itsolution',views.itsolution),
     path('digital',views.booksession),
      path(

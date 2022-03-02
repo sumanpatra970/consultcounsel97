@@ -131,4 +131,5 @@ urlpatterns = [
     path('swaraj',views.swaraj),
     path('kavya',views.kavya),
     path('shilky',views.shilky),
+    path('radha',views.radha),
 ]
