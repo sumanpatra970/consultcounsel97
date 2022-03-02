@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from forum import  views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -10,6 +10,7 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
+    path('',include('community.urls')),
     path('signup',views.signup),
     path('account',views.account),
     path('login',views.login),
@@ -68,7 +69,6 @@ urlpatterns = [
     path('sports',views.sports),
     path('privacy',views.privacy),
     path('policy',views.policy),
-    path('shree',views.shree),
     path('rahul',views.rahul),
     path('jyoti',views.jyoti),
     path('shashank',views.shashank),
