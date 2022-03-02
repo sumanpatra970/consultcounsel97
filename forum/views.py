@@ -865,7 +865,7 @@ def manisha(request):
     return render(request,'manisha.html')
 
 def rudra(request):
-    return render(request,'rudra.html')
+    return render(request,'rudraa.html')
 
 def somensoni(request):
     return render(request,'notfound.html')
