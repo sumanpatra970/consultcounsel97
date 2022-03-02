@@ -369,3 +369,21 @@ def mrvish(request):
 
 def aman(request):
     return render(request,'aman.html')
+
+def indu(request):
+    return render(request,'indu.html')
+
+def swaraj(request):
+    return render(request,'swaraj.html')
+
+def swadesh(request):
+    return render(request,'swadesh.html')
+
+def kavya(request):
+    return render(request,'kavya.html')
+
+def shilky(request):
+    return render(request,'shilky.html')
+
+def radha(request):
+    return render(request,'radha.html')

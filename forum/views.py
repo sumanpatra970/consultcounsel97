@@ -640,23 +640,6 @@ def fillup(request):
 def qrp(request):
     return render(request,'form.html')
 
-def manasasu(request):
-    return render(request,'manasasu.html')
-
-def jayshree(request):
-    return render(request,'jayshree.html')
-
-def shuvransu(request):
-    return render(request,'sutripathy.html')
-
-def chetana(request):
-    return render(request,'chetana_mike.html')
-
-def mrvish(request):
-    return render(request,'vishwanath.html')
-
-def aman(request):
-    return render(request,'aman.html')
 
 def hireme(request):
     return render(request,'hire_home.html')
@@ -684,23 +667,6 @@ def form_submit(request):
     else:
         return render(request,'ok.html')
 
-def indu(request):
-    return render(request,'indu.html')
-
-def swaraj(request):
-    return render(request,'swaraj.html')
-
-def swadesh(request):
-    return render(request,'swadesh.html')
-
-def kavya(request):
-    return render(request,'kavya.html')
-
-def shilky(request):
-    return render(request,'shilky.html')
-
-def radha(request):
-    return render(request,'radha.html')
 
 def pdf_view(request):
     try:
