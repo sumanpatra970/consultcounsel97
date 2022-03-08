@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="suman">
+    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup best">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'basic.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <title>MENTOR</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid lll">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="{% static 'ekta.jpg'%}" width="100%" height="350px"><br>
+                <h3 class="pox">Ekta </h3>
+                <h3 class="pox">Software engineer at Boeing</h3>
+                <h3 class="pox">ektagandhi333@gmail.com</h3>
+                <p class="kk pox">
+                    I am Ekta. I am from Haryana, Sonipat. Before joining Boeing I was working with Infosys for 3 years as a java developer. I have implemented projects that were used in talent transformation programs across Infosys and clients. 
+                    In my free time I love to paint, watch movies and explore new places.
+                    I look forward to work and grow with you all in my new journey with Boeing. Looking forward to learn new things and grow professionally and personally.
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -76,7 +76,7 @@ urlpatterns = [
     path('shyama',views.shyama),
     path('deepa',views.deepa),
     path('deeja',views.deeja),
-    path('priyankapoetess',views.pp),
+    path('priyankapoetess',views.priyankapoetess),
     path('chetna',views.chetna),
     path('adityaoli',views.adityoli),
     path('prasanna',views.prasanna),
@@ -132,4 +132,6 @@ urlpatterns = [
     path('kavya',views.kavya),
     path('shilky',views.shilky),
     path('radha',views.radha),
+    path('ekta',views.ekta),
+    path('pallavi-eloquent',views.pallavi2)
 ]
