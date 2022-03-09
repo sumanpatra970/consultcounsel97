@@ -131,7 +131,7 @@ urlpatterns = [
     path('swaraj',views.swaraj),
     path('kavya',views.kavya),
     path('shilky',views.shilky),
-    path('radha',views.radha),
+    path('govind',views.radha),
     path('ekta',views.ekta),
     path('pallavi-eloquent',views.pallavi2)
 ]
