@@ -1,11 +1,9 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
-from django.http import HttpResponseRedirect,HttpResponse
-from django.conf import settings
+from django.http import HttpResponseRedirect
 from django.contrib import auth
 from django.contrib.auth.models import User
 from .forms import login_form,name_form,password_form,user_change_form,account_creation_form
-# Create your views here.
+
 def signup(request):
     if request.method=="POST":
         fm=account_creation_form(request.POST)

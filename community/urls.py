@@ -2,6 +2,17 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('mentors',views.mentor),
+    path('art',views.art),
+    path('dancer',views.dancer),
+    path('musician',views.music),
+    path('professional',views.professional),
+    path('others',views.others),
+    path('blogger',views.blogger),
+    path('fashion',views.fashion),
+    path('education',views.education),
+    path('fitness',views.fitness),
+    path('sports',views.sports),
     path('shree',views.shree),
     path('rahul',views.rahul),
     path('jyoti',views.jyoti),
@@ -55,11 +66,11 @@ urlpatterns = [
     path('bharatendu',views.bharatendu),
     path('abhinash',views.abhinash),
     path('abhipsa',views.abhipsa),
-    path('amit_patjoshi',views.amit_patjoshi),
+    path('amitpatjoshi',views.amitpatjoshi),
     path('richa',views.richa),
     path('priynkabrahama',views.priynkabrahama),
     path('ajay',views.ajay),
-    path('soumya_prusti',views.soumya_prusti),
+    path('soumyaprusti',views.soumyaprusti),
     path('tikeshwar',views.tikeshwar),
     path('pallavi',views.pallavi),
     path('sidhi',views.sidhi),
@@ -133,5 +144,5 @@ urlpatterns = [
     path('shilky',views.shilky),
     path('govind',views.radha),
     path('ekta',views.ekta),
-    path('pallavi-eloquent',views.pallavi2)
+    path('pallavi-eloquent',views.pallavi2),
 ]

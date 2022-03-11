@@ -9,15 +9,17 @@
     <meta name="description" content="Consult  Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
     <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Consult&Counsel</title>
 </head>
 <body>
-     <div class="container-fluid ll">
-        <div class="row justify-content-around">
+     <div class="container-fluid">
+        <div class="row">
             <div class="col-sm-12">
-                <a href="/"><img src="{% static 'pp.jpeg'%}" alt="Avatar" width="100%" height="120%"></a>
+                <a href="/"><img src="{% static 'pp.jpeg'%}" alt="Avatar" class="logo"></a>
             </div>
-        </div><br>
+        </div>
         <div class="row justify-content-around">
             <div class="col-xs-1">
                 <div class="dropdown">
@@ -31,7 +33,7 @@
                         <a href="fashion">FASHION</a>
                         <a href="professional">PROFESSIONAL</a>
                         <a href="fitness">FITNESS</a>
-                        <a href="vlogger">BLOGGING</a>
+                        <a href="blogger">BLOGGING</a>
                         <a href="others">OTHERS</a>
                     </div>
                 </div>
@@ -56,7 +58,7 @@
                 <div class="dropdown">
                     <button class="dropbtn btn btn-primary">REGISTER</button>
                     <div class="dropdown-content">
-                        <a href="volunter">JOIN AS A MENTOR</a>
+                        <a href="join-as-mentor">JOIN AS A MENTOR</a>
                     </div>
                 </div>
             </div>
@@ -80,10 +82,10 @@
             </div>
             <div class="col-xs-1">
                 <div class="dropdown">
-                    <a href="startnow"><button class="dropbtn btn btn-primary">COURSE</button></a>
+                    <button class="dropbtn btn btn-primary">COURSE</button>
                     <div class="dropdown-content">
                         <a href="course">HR COURSE</a>
-                        <a href="softwaretrain">SOFTWARE TRAINING</a>
+                        <a href="softwarecourse">SOFTWARE TRAINING</a>
                         <a href="skilldevelopment">SKILL DEVELOPMENT</a>
                     </div>
                 </div>
@@ -97,26 +99,26 @@
                 </div>
             </div>
         </div>
-    </div><br>
-    <div class="container-fluid kkk">
+    </div>
+    <div class="container-fluid slider-background space">
         <div class="row">
             <div class="col-sm-12">
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                         <div class="numbertext">1 / 4</div>
-                        <img src="static/img1.jpg" alt="Avatar" style="width:100%" >
+                        <img src="static/img1.jpg" alt="Avatar" class="sliding">
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">2 / 4</div>
-                        <img src="static/img2.jpg" alt="Avatar" style="width:100%">
+                        <img src="static/img2.jpg" alt="Avatar" class="sliding">
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">3 / 4</div>
-                        <img src="static/img3.jpg" alt="Avatar" style="width:100%">
+                        <img src="static/img3.jpg" alt="Avatar" class="sliding">
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">4 / 4</div>
-                        <img src="static/img5.jpg" alt="Avatar" style="width:100%">
+                        <img src="static/img5.jpg" alt="Avatar" class="sliding">
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -130,96 +132,96 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid ll">
-        <div class="row lk">
+    <div class="container-fluid">
+        <div class="row mentorsection">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <h4 class="pox ssp">MENTORS</h4>
+                <h4 class="align space-margin">MENTORS</h4>
             </div>
         </div><br>
         <div class="row">
-            <div class="col-sm-3 pox"><img src="static/suniti (2).jpg" alt="Avatar" class="ch"></img><br><h4 class="pox mm">IIM Indore Almuni</h4></div>
-            <div class="col-sm-3 pox"><img src="/static/pallavii.jpg" alt="Avatar" class="ch"></img><br><h4 class="pox mm">Social Entrepreneur & Digital Influencer</h4></div>
-            <div class="col-sm-3 pox"><img src="/static/abhinash.jpg" alt="Avatar" class="ch"></img><br><h4 class="pox mm">Flim maker</h4></div>
-            <div class="col-sm-3 pox"><img src="/static/Nirali.jpg" alt="Avatar" class="ch"></img><br><h4 class="pox mm">HR Professional and Psychologist</h4></div>
+            <div class="col-sm-3 align"><img src="static/suniti.jpg" alt="Avatar" class="mentorimg"></img><br><h4 class="align textsize">IIM Indore Almuni</h4></div>
+            <div class="col-sm-3 align"><img src="/static/pallavii.jpg" alt="Avatar" class="mentorimg"></img><br><h4 class="align textsize">Social Entrepreneur & Digital Influencer</h4></div>
+            <div class="col-sm-3 align"><img src="/static/abhinash.jpg" alt="Avatar" class="mentorimg"></img><br><h4 class="align textsize">Flim maker</h4></div>
+            <div class="col-sm-3 align"><img src="/static/Nirali.jpg" alt="Avatar" class="mentorimg"></img><br><h4 class="align textsize">HR Professional and Psychologist</h4></div>
         </div>
-        <div class="row lkp">
+        <div class="row viewmore">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <a href="mentors"><h4 class="pox ssp">+view more</h4></a>
+                <a href="mentors"><h4 class="align space-margin">+view more</h4></a>
             </div>
-        </div><br>
-        <div class="row">
+        </div>
+        <div class="row space">
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="session"><button class="btn btn-primary">BOOK A SESSION</button></a></div>
-                <div class="col-md-12"><img src="{% static 'discuss.jpg'%}" alt="Avatar" height="100%" width="100%"></div>
-                <div class="col-md-12"><a href="session"><p class="mm">Click here to book a session with our mentors.They will guide you.</a></div>
+                <div class="col-md-12 align"><a href="session"><button class="btn btn-primary">BOOK A SESSION</button></a></div>
+                <div class="col-md-12"><img src="{% static 'discuss.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="session"><p class="textsize">Click here to book a session with our mentors.They will guide you.</a></div>
             </div>
             <div class="col-sm-6">
-                <div class="col-sm-12 pox"><button class="btn btn-primary">MUST WATCH</button></div>
-                <div class="col-sm-12"><video width="100%" height="100%" controls><source src="{% static 'mov.mp4' %}" type="video/mp4"></video></div>
+                <div class="col-sm-12 align"><button class="btn btn-primary">MUST WATCH</button></div>
+                <div class="col-sm-12"><video controls width="100%" height="100%"><source src="{% static 'mov.mp4' %}" type="video/mp4"></video></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="volunter"><button class="btn btn-primary">BE A MENTOR</button></a></div>
-                <div class="col-md-12"><img src="{% static 'mentor.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="volunter"><p class="mm">Click here to become a Mentor. Earn incentives and make impact on society.</p></a></div>
+                <div class="col-md-12 align"><a href="volunter"><button class="btn btn-primary">BE A MENTOR</button></a></div>
+                <div class="col-md-12"><img src="{% static 'mentor.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="join-as-mentor"><p class="textsize">Click here to become a Mentor. Earn incentives and make impact on society.</p></a></div>
             </div>
-        </div>
+        </div><hr>
         <div class="row">
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="discussion"><button class="btn btn-primary">ASK A QUESTION</button></a></div>
-                <div class="col-md-12" id="ho"><img src="{% static 'volunter.jpg'%}" alt="Avatar" height="100%" width="100%"></div>
-                <div class="col-md-12"><a href="discussion"><p class="mm">Click here to ask questions.Mentors are always there to answer your questions.</p></a></div>
+                <div class="col-md-12 align"><a href="discussion"><button class="btn btn-primary">ASK A QUESTION</button></a></div>
+                <div class="col-md-12" id="ho"><img src="{% static 'volunter.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="discussion"><p class="textsize">Click here to ask questions.Mentors are always there to answer your questions.</p></a></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="donation"><button class="btn btn-primary">BE A DONOR</button></a></div>
-                <div class="col-md-12"><img src="{% static 'charity.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="donation"><p class="mm">Click here to donate.We need your help to support people and help them financially.</p></a></div>
+                <div class="col-md-12 align"><a href="donation"><button class="btn btn-primary">BE A DONOR</button></a></div>
+                <div class="col-md-12"><img src="{% static 'charity.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="donation"><p class="textsize">Click here to donate.We need your help to support people and help them financially.</p></a></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="about"><button class="btn btn-primary">ABOUT US</button></a></div>
-                <div class="col-md-12"><img src="{% static 'people.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="about"><p class="mm">Click here to know about us.Who we are,what we do and How we work to make a better world.</p></a></div>
+                <div class="col-md-12 align"><a href="about"><button class="btn btn-primary">ABOUT US</button></a></div>
+                <div class="col-md-12"><img src="{% static 'people.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="about"><p class="textsize">Click here to know about us.Who we are,what we do and How we work to make a better world.</p></a></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="testimony"><button class="btn btn-primary">WHAT PEOPLE SAY</button></a></div>
-                <div class="col-md-12"><img src="{% static 'volunt.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="testimony"><p class="mm">Click here to read the reviews of people.Find out what people think about consult&counsel.</p></a></div>
+                <div class="col-md-12 align"><a href="testimony"><button class="btn btn-primary">WHAT PEOPLE SAY</button></a></div>
+                <div class="col-md-12"><img src="{% static 'volunt.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="testimony"><p class="textsize">Click here to read the reviews of people.Find out what people think about consult&counsel.</p></a></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="startnow"><button class="btn btn-primary">COURSES</button></a></div>
-                <div class="col-md-12"><img src="{% static 'course_home.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="startnow"><p class="mm">Click here to know about our courses.Find out how you can attend courses and what benefits you get.</p></a></div>
+                <div class="col-md-12 align"><a href="startnow"><button class="btn btn-primary">COURSES</button></a></div>
+                <div class="col-md-12"><img src="{% static 'course_home.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="startnow"><p class="textsize">Click here to know about our courses.Find out how you can attend courses and what benefits you get.</p></a></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="hireme"><button class="btn btn-primary">HIRE A MENTOR</button></a></div>
-                <div class="col-md-12"><img src="{% static 'hire_home.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="hireme"><p class="mm">Want to hire our mentors. That's great.Click to know how you can proceed further.</p></a></div>
+                <div class="col-md-12 align"><a href="hireme"><button class="btn btn-primary">HIRE A MENTOR</button></a></div>
+                <div class="col-md-12"><img src="{% static 'hire_home.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="hireme"><p class="textsize">Want to hire our mentors. That's great.Click to know how you can proceed further.</p></a></div>
             </div>
             <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="#"><button class="btn btn-primary">MENTORS</button></button></a></div>
-                <div class="col-md-12"><img src="{% static 'mentor_home.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="mentordetails"><p class="mm">Click to know mentors of different areas and their details.</p></a></div>
+                <div class="col-md-12 align"><a href="#"><button class="btn btn-primary">MENTORS</button></button></a></div>
+                <div class="col-md-12"><img src="{% static 'mentor_home.jpg'%}" alt="Avatar" class="home-core-img"></div>
+                <div class="col-md-12"><a href="mentordetails"><p class="textsize">Click to know mentors of different areas and their details.</p></a></div>
             </div>
              <div class="col-sm-3">
-                <div class="col-md-12 pox"><a href="career"><button class="btn btn-primary">WORK WITH US</button></button></a></div>
-                <div class="col-md-12"><img src="{% static 'career_home.jpg'%}" alt="Avatar" height="auto" width="100%"></div>
-                <div class="col-md-12"><a href="career"><p class="mm">Start journey with us.Click here to know how to apply for the positions and many more.</p></a></div>
+                <div class="col-md-12 align"><a href="career"><button class="btn btn-primary">WORK WITH US</button></button></a></div>
+                <div class="col-md-12"><img src="{% static 'career_home.jpg'%}" alt="Avatar" class="home-core-img"</div>
+                <div class="col-md-12"><a href="career"><p class="textsize">Start journey with us.Click here to know how to apply for the positions and many more.</p></a></div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid ll">
-        <div class="row llk">
+    </div><hr>
+    <div class="container-fluid">
+        <div class="row happy-customer">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <h4 class="pox ssp">HAPPY CUSTOMERS</h4>
+                <h4 class="align space-margin">HAPPY CUSTOMERS</h4>
             </div>
-        </div><br>
-        <div class="row">
-            <div class="col-sm-3 pox"><img src="static/akash.jpg" alt="Avatar" class="ch" width="300px"></img><br><div><p class="pox kk">I have taken session about my career,that was awesome.I highly recommend this site.</p></div></div>
-            <div class="col-sm-3 pox"><img src="/static/shrutiji.jpeg" alt="Avatar" class="ch" width="300px"></img><br><div><p class="pox kk">I wanted to start my own company but confused how to start.I took a session and that helped me a lot.</p></div></div>
-            <div class="col-sm-3 pox"><img src="/static/shlok.jpg" alt="Avatar" class="ch" width="300px"></img><br><div><p class="pox kk">Consult & Counsel helped me a lot in my preparation.Thanks a lot team.</p></div></div>
-            <div class="col-sm-3 pox"><img src="static/sandeep.jpeg" alt="Avatar" class="ch" width="300px"></img><br><div><p class="pox kk">I want to start my career in aws and cloud.This team helped me a lot to achieve my goal.</p></div></div>
+        </div>
+        <div class="row space">
+            <div class="col-sm-3 align"><img src="static/akash.jpg" alt="Avatar" class="mentorimg"></img><br><div><p class="align textsize">I have taken session about my career,that was awesome.I highly recommend this site.</p></div></div>
+            <div class="col-sm-3 align"><img src="/static/shrutiji.jpeg" alt="Avatar" class="mentorimg"></img><br><div><p class="align textsize">I wanted to start my own company but confused how to start.I took a session and that helped me a lot.</p></div></div>
+            <div class="col-sm-3 align"><img src="/static/shlok.jpg" alt="Avatar" class="mentorimg"></img><br><div><p class="align textsize">Consult & Counsel helped me a lot in my preparation.Thanks a lot team.</p></div></div>
+            <div class="col-sm-3 align"><img src="static/sandeep.jpeg" alt="Avatar" class="mentorimg"></img><br><div><p class="align textsize">I want to start my career in aws and cloud.This team helped me a lot to achieve my goal.</p></div></div>
         </div>
     </div>
     <!-- Messenger Chat plugin Code -->
@@ -227,28 +229,28 @@
 
     <!-- Your Chat plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-    <div class="container-fluid llm">
+    </div><hr>
+    <div class="container-fluid footer">
         <div class="row">
-            <div class="col-md-2 pox">
-                <p class="kl">Legal</p>
-                <a href="privacy"><p class="kk">Privacy</P></a>
-                <a href="policy"><p class="kk">Policy</P></a>
-                <a href="about"><p class="kk">About us</p></a>
+            <div class="col-md-2 align">
+                <p class="footerlink">Legal</p>
+                <a href="privacy"><p class="textsize">Privacy</P></a>
+                <a href="policy"><p class="textsize">Policy</P></a>
+                <a href="about"><p class="textsize">About us</p></a>
             </div>
-            <div class="col-md-2 pox">
-                <p class="kl">Links</p>
-                <a href="support"><p class="kk">Contact us</P></a>
-                <a href="career"><p class="kk">Career</P></a>
-                <a href="donation"><p class="kk">Donation</P></a>
+            <div class="col-md-2 align">
+                <p class="footerlink">Links</p>
+                <a href="support"><p class="textsize">Contact us</P></a>
+                <a href="career"><p class="textsize">Career</P></a>
+                <a href="donation"><p class="textsize">Donation</P></a>
             </div>
-            <div class="col-md-2 pox">
-                <p class="kl">Partners</p>
-                <a href="https://vishuddhiyogastudio.business.site/?utm_source=gmb&utm_medium=referral"><p class="kk">Vishuddhi Yoga Studio</p></a>
-                <a href="https://thehrsuite.wixsite.com/thehrsuite"><p class="kk">The HR Suite</p></a>
+            <div class="col-md-2 align">
+                <p class="footerlink">Partners</p>
+                <a href="https://vishuddhiyogastudio.business.site/?utm_source=gmb&utm_medium=referral"><p class="textsize">Vishuddhi Yoga Studio</p></a>
+                <a href="https://thehrsuite.wixsite.com/thehrsuite"><p class="textsize">The HR Suite</p></a>
             </div>
-            <div class="col-md-3 pox">
-                <p class="kl">Social account</p>
+            <div class="col-md-3 align">
+                <p class="footerlink">Social account</p>
                 <div class="row">
                     <div class="col-12">
                         <a href="https://m.facebook.com/Consult-Counsel-117588793422169/"><i class="fab fa-facebook-square" style="font-size: 2.73em"></i></a>
@@ -260,15 +262,15 @@
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-sm-8"><br>
-                        <a href="feedback"><p class="kk pox">Feedback</p></a>
+                        <a href="feedback"><p class="textsize align">Feedback</p></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pox">
-                <p class="kl">Office address</p>
+            <div class="col-md-3 align">
+                <p class="footerlink">Office address</p>
                 <i class='fas fa-home' style='font-size:25px'></i>
-                <p class="kk sl">Ejipura,kormangla,Bangalore</p>
-                <p class="kk sl">Railway colony,Ramagundam,Telangana</p>
+                <p class="textsize sl">Ejipura,kormangla,Bangalore</p>
+                <p class="textsize sl">Railway colony,Ramagundam,Telangana</p>
             </div>
         </div>
     </div>

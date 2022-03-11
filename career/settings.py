@@ -11,7 +11,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1','consultcounsel.herokuapp.com','www.consultandcounsel.com']
 
 INSTALLED_APPS = [
-    'forum',
+    'core',
+    'services',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 align">
+                <img src="{% static 'amit_patjoshi.jpg'%}" class='mentor-self-image'><br>
+                <h3>Amit Patjoshi</h3>
+                <h3>Healthcare consultant, Gamer & Computer Geek</h3>
+                <h3></h3>
+                <p class="textsize">
+                    I have been a part of Deloitte consulting for about 2 years working on different projects based on healthcare and insurance consulting.
+                    I have a keen interest on smart home automation based on devices like Alexa and google home. I also am a computer geek searching for the specs for high end gaming.
+                    Played a lot of games and watched a lot of animes.
+                    Consult me on based on smart home tech, gaming, computer issues
+                    Also mobile photography and editing on snapseed.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

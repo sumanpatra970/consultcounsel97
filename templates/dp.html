@@ -3,19 +3,6 @@
 {% load static%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="suman">
-    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
-    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
-    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'basic.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
-    <title>DIRECTPAY</title>
-    <style>
-    
-</style>
 </head>
 <body>
     {% block content %}
@@ -23,18 +10,22 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <form method="POST" action="directpayy" class="form-group">
+                <form method="POST" action="directpay-gateway" class="form-group">
                     {% csrf_token %}
-                    <h3 class="pox">Creating order</h3>
-                    <div class="suppy"><label><h5 class="kk puppy">Name</h5></label><input type="text" name="name" required class="form-control" value={{name}}></div>
-                    <div class="suppy"><label><h5 class="kk puppy">Mobile no</h5></label><input type="text" name="phone" required class="form-control"></div>
-                    <div class="suppy"><label><h5 class="kk puppy">Email</h5></label><input type="email" name="email" required class="form-control"></div>
-                    <div class="suppy"><label><h5 class="kk puppy">Amount</h5></label><input type="text" name="amount" required class="form-control"></div>
-                    <button type="submit" name="submit" value="Submit" class="btn btn-dark" required>SUBMIT</button>
+                    <h3 class="align form-heading">Creating order</h3>
+                    <label class="space"><div class="textsize">Name</div></label>
+                    <input type="text" name="name" required class="form-control space" value={{name}}>
+                    <label class="space"><div class="textsize">Mobile no</div></label>
+                    <input type="text" name="phone" required class="form-control space">
+                    <label class="space"><div class="textsize">Email</div></label>
+                    <input type="email" name="email" required class="form-control space">
+                    <label class="space"><div class="textsize">Amount</div></label>
+                    <input type="text" name="amount" required class="form-control space">
+                    <button type="submit" name="submit" value="Submit" class="btn btn-dark space-button">SUBMIT</button>
                 </form>
             </div>
         </div>
-    </div><br>
+    </div>
     {% endblock content %}
 </body>
 </html>

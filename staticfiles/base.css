@@ -5,7 +5,9 @@ img {
 video {
    border-radius: 8px;
 }
-
+button{
+   font-size:18px;
+}
 .dropbtn {
    height: 40px;
    width: 90px;
@@ -21,20 +23,22 @@ video {
    display: none;
    position: absolute;
    background-color: white;
-   width: 90px;
+   width: 120px;
    font-size: 16px;
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
    z-index: 1;
+   padding:8px;
 }
 .dropdown-content a {
    color: black;
-   padding: 10px 4px;
+   padding:8px;
    text-decoration: none;
    display: block;
    border-radius: 8px;
+   background-color: white;
 }
 .dropdown-content a:hover {
-   background-color:white;
+   background-color:whitesmoke;
 }
 .dropdown:hover .dropdown-content {
    display: block;
@@ -117,14 +121,14 @@ video {
 }
 @media only screen and (max-width: 300px) {
 .prev, .next,.text {
-      font-size: 11px
-   }
+   font-size: 11px
+}
 .slideshow-container {
-       width: 100%;
-       max-height:1000px;
-       position: relative;
-       margin: auto;
-   }
+   width: 100%;
+   max-height:1000px;
+   position: relative;
+   margin: auto;
+}
 }
 a:link{
    color:#800000;
@@ -132,73 +136,47 @@ a:link{
 a:visited {
    color: #800000;
 }
-.mm{
-   font-family: "Arial";
-   font-size: 20px;
-}
-.lll{
-   background-color:white;
-}
-.llm{
+.footer{
    background-color:#F0F8FF;
 }
-.kkk{
+.slider-background{
    background-color:white;
 }
-.kk{
+.textsize{
+   font-family: "Arial";
+   font-size: 18px;
+}
+.footerlink{
    font-family: "Arial";
    font-size: 20px;
-}
-.kl{
-   font-family: "Arial";
-   font-size: 22px;
    background-color:#FFE933;
 }
-.ll{
-   background-color:white;
-}
-.lk{
+.mentorsection{
    background-color:#DDA0DD;
 }
-.ssp{
+.space-margin{
    margin-top:10px;
 }
-.pox{
+.align{
    text-align:center;
 }
-.ch{
+.mentorimg{
    border-radius: 50%;
    height: 300px;
+   width:300px;
 }
-.po{
-   background-color:#F2D385;
-}
-.llk{
+.happy-customer{
    background-color:#B4F56C;
 }
-.lkp{
+.viewmore{
    font-family: "Arial";
    font-size: 18px;
    background-color:#A6ACAF;
-}
-.lp{
-   max-width:1000px;
-   max-height:1000px;
-}
-.cpu{
-   margin-left:200px;
-}
-.popo{
-   color:green;
-   text-align:center;
 }
 .heading{
    color:red;
    font-weight:500;
    text-align:center;
-}
-*{
-   box-sizing: border-box;
 }
 .openBtn {
    justify-content: left;
@@ -261,23 +239,17 @@ a:visited {
 .openButton:hover {
    opacity: 1;
 }
-.cs{
-   background-color:#bfff80;
+.logo{
+   width:100%;
+   height:100%;
 }
-.cv{
-   background-color:#78F57A;
+.space{
+   margin-top:10px;
 }
-.cc{
-   color:red;
+.sliding{
+   width:100%;
 }
-.tox{
-   font-family: "Sofia";
-   font-size: 22px;
-}
-.puppy{
-   margin:0px;
-   padding:0px;
-}
-.suppy{
-   margin-bottom:10px;
+.home-core-img{
+   height:100%;
+   width:100%;
 }

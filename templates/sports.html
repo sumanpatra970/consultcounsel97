@@ -19,18 +19,18 @@
          <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <h3 class="pox">Book session</h4>
-                <p class="kk">Fill up the form get free session now.</p>
-                <p class="kk">You donot need to pay any amount.</p>
+                <h3 class="align form-heading">Book Free session</h4>
+                <p class="textsize">Fill up the form get free session now.</p>
+                <p class="textsize">You donot need to pay any amount.</p>
                 <form class="form-group" action="web" method="POST">
                     {% csrf_token %}
-                    {%for i in fm%}
-                    <h5 class="kk">{{ i.label }}</h5>
-                    <h5 class="kk">{{ i }}{{i.errors|striptags}}</h5>
-                    {%endfor%}
+                    {% for field in fm %}
+                    <label class="textsize space">{{ field.label }}</label>
+                    {{ field }}
+                    {% endfor %}
                     <button type="submit" class="btn btn-success">SUBMIT</button>
                 </form>
-                <a href="mentors"><p class="kk">Check our mentors.</p></a>
+                <a href="mentors"><p class="textsize">Check our mentors.</p></a>
             </div>
         </div>
     </div>

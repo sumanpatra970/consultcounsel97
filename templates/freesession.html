@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form method="POST" action="freesession" class="form-group">
+                    {% csrf_token %}
+                    <h3 class="align form-heading">Fill the form correctly</h3>
+                    <label for="username" class="space"><div class="textsize">Name</div></label>
+                    <input type="text" name="username" required class="form-control space">
+                    <label for="mobileno"><div class="textsize">Mobile</div> </label>
+                    <input type=text name="mobileno"  class="form-control space">
+                    <label for="email"><div class="textsize">Email</div> </label>
+                    <input type=text name="email" class="form-control space">
+                    <label for="field"><div class="textsize">Domain</div></label>
+                    <input type=text name="field" class="form-control space">
+                    <label for="doubt"><div class="textsize">Your Problem</div> </label>
+                    <input type=text name="doubt" class="form-control space">
+                    <button type="submit" name="submit" value="Submit" class="btn btn-dark space-button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {%endblock content%}
+</body>
+</html>

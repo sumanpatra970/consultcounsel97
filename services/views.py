@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from forum.models import Forum_table,Primemember,Transaction,transcatid,course_info,Court,solution
+from .models import Forum_table,Primemember,Transaction,transcatid,course_info,Court,solution,hiring_mentor
 from career import settings
 from django.contrib import auth
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect,HttpResponse
+from .Form import question_form,answer_form,volunter_form
 import razorpay
-from forum.Form import question_form,answer_form,volunter_form
-# Create your views here.
 
 def discussion(request):
     obj=Forum_table.objects.all()
@@ -47,20 +46,17 @@ def redirect(request):
 def session(request):
     return render(request,'session.html')
 
-def prime(request):
-        return render(request,'planchoice.html')
+def step1(request):
+        return render(request,'step1.html')
 
-def plan(request):
-    return render(request,'planchoicenext.html')
+def step2(request):
+    return render(request,'step2.html')
 
-def plan_next(request):
+def step3(request):
     if request.user.is_authenticated:
-        return render(request,'payment.html')
+        return render(request,'step3.html')
     else:
         return HttpResponseRedirect('login')
-
-def paytm(request):
-    return render(request,'planchoice.html')
 
 def nextpay(request):
     return HttpResponseRedirect('underconst')
@@ -126,13 +122,6 @@ def callback(request):
             is_valid_checksum = PaytmChecksum.verify_checksum(paytm_params, PAYTM_SECRET_KEY, str(paytm_checksum))
             if is_valid_checksum:
                 received_data['message'] = "Checksum Matched"
-                send_mail(
-                'counsultandcounsel',
-                'ADMIN,A new prime member is added.Please check and acknowledge.Thank you.',
-                settings.EMAIL_HOST_USER,
-                ['sumanpatra68@gmail.com',
-                'bhanup997@gmail.com'],
-                fail_silently=False)
                 return render(request, 'callback.html', context=received_data)
             else:
                 received_data['message'] = "Checksum Mismatched"
@@ -140,8 +129,34 @@ def callback(request):
         else:
             return  render(request,'ok.html')
 
-def testing(request):
-    return render(request, 'order.html', {})
+def directpay(request):
+    name=request.user
+    return render(request,'directpay.html',{'name':name,'request':request})
+
+def qrdirect(request):
+    if request.method == "GET":
+        return render(request, 'directpay.html')
+    else:
+        username = request.POST['name']
+        mobileno = request.POST['phone']
+        email = request.POST['email']
+        plan = int(request.POST['plan'])
+        refer = request.POST['refer']
+        concern= request.POST['concern']
+        if plan==1:
+            Amount=150
+        elif plan==2:
+            Amount=300
+        else:
+            Amount=400
+        x=Primemember.objects.create(Name=username,Mobileno=mobileno,Email=email,Plan=plan,Refered=refer,Query=concern)
+        x.save()
+        order_id=username+str(plan)+"dpscan_rt_spl"
+        transaction = Transaction.objects.create(made_by=username, amount=Amount,order_id=order_id)
+        transaction.save()
+    
+def razorpaygate(request):
+    return render(request, 'razorpay.html', {})
 
 def create_order(request):
     context = {}
@@ -194,96 +209,45 @@ def payment_status(request):
     y=response['razorpay_order_id']
     v=transcatid.objects.create(order_id=y,transcation_id=x)
     v.save()
-    send_mail(
-        'counsultandcounsel',
-            'Admin,A new prime member is added.Please check. Thank you.',
-            settings.EMAIL_HOST_USER,
-            ['sumanpatra68@gmail.com',
-            'bhanup997@gmail.com'],
-            fail_silently=False
-            )
     try:
         status = client.utility.verify_payment_signature(params_dict)
         return render(request, 'order_summary.html', {'status': 'Payment Successful','x':x,'y':y})
     except:
         return render(request, 'order_summary.html', {'status': 'Payment Faliure!!!'})
 
-def directpay(request):
-    name=request.user
-    return render(request,'directpay.html',{'name':name,'request':request})
+    return render(request,'scan.html',{'amount':Amount})
 
-def direct(request):
-    if request.method == "GET":
-        return render(request, 'directpay.html')
-    else:
-        username = request.POST['name']
-        mobileno = request.POST['phone']
-        email = request.POST['email']
-        plan = int(request.POST['plan'])
-        refer = request.POST['refer']
-        concern= request.POST['concern']
-        if plan==1:
-            Amount=150
-        elif plan==2:
-            Amount=300
-        else:
-            Amount=400
-        x=Primemember.objects.create(Name=username,Mobileno=mobileno,Email=email,Plan=plan,Refered=refer,Query=concern)
-        x.save()
-        order_id=username+str(plan)+"dpscan_rt_spl"
-        transaction = Transaction.objects.create(made_by=username, amount=Amount,order_id=order_id)
-        transaction.save()
-        send_mail(
-        'counsultandcounsel',
-            'Admin, A new prime member is added by Direct Pay. Please check.',
-            settings.EMAIL_HOST_USER,
-            ['sumanpatra68@gmail.com',
-            'bhanup997@gmail.com'],
-            fail_silently=False
-            )
-        return render(request,'scan.html',{'amount':Amount})
+def mentor(request):
+    return render(request,'mentor.html')
 
-def netbanking(request):
-    return HttpResponseRedirect('/paymentstart')
-
-def volunter(request):
-    return render(request,'volunter.html')
-
-def volunter_next(request):
+def mentorform(request):
     if request.method=="POST":
         fm=volunter_form(request.POST,request.FILES)
         if fm.is_valid():
             email=fm.cleaned_data['Email']
             fm.save()
-            send_mail(
-            'counsultandcounsel',
-            'Admin,A new mentor has been registered.Please check.',
-            settings.EMAIL_HOST_USER,
-            ['sumanpatra68@gmail.com',
-            'bhanup997@gmail.com'],
-            fail_silently=False)
-            send_mail(
-            'counsultandcounsel',
-            'Thank you for becoming a mentor.You will get call by our team.We are growing and we want you to grow as well as. Guide students by taking session and earn.',
-            settings.EMAIL_HOST_USER,
-            [email],
-            fail_silently=False)
-            return render(request,'volunternext.html')
+            return render(request,'mentor-form.html')
         else:
             fm=volunter_form()
-            return render(request,'volunterform.html',{'fm':fm})
+            return render(request,'mentorform.html',{'fm':fm})
     else:
         fm=volunter_form()
-        return render(request,'volunterform.html',{'fm':fm})
+        return render(request,'mentorform.html',{'fm':fm})
 
-def course(request):
-    return render(request,'course.html')
+def startcourse(request):
+    return render(request,'fillup.html')
 
-def skill(request):
+def hrcourse(request):
+    return render(request,'hrcourse.html')
+
+def skilldevelopment(request):
     return render(request,'skilldevelopment.html')
 
 def software(request):
     return render(request,'software.html')
+
+def courseform(request):
+    return render(request,'courseform.html')
 
 def paydirect(request):
     if request.method == 'POST':
@@ -294,31 +258,18 @@ def paydirect(request):
         refered=request.POST.get('emaill')
         x=course_info.objects.create(name=fname+lname,email=email,mobile=phone,Refered=refered)
         x.save()
-        send_mail(
-            'counsultandcounsel',
-            'Admin,you received a new course request.Please check',
-            settings.EMAIL_HOST_USER,
-            ['sumanpatra68@gmail.com',
-            'bhanup997@gmail.com'],
-            fail_silently=False)
         return render(request,'scan.html')
-
-def fillup(request):
-    return render(request,'fillup.html')
-
-def qrp(request):
-    return render(request,'form.html')
 
 def virtualcourt(request):
     return render(request,'virtualcourt.html')
 
 def bookcourt(request):
-    return render(request,'booking.html')
+    return render(request,'bookcourt.html')
 
-def booklast(request):
-    return render(request,'bookcourtroom.html')
+def courtform(request):
+    return render(request,'courtform.html')
 
-def lastonly(request):
+def courtformsubmit(request):
     if request.method == 'POST':
         fname = request.POST.get('lastname')
         location = request.POST.get('location')
@@ -326,36 +277,33 @@ def lastonly(request):
         email = request.POST.get('email')
         x=Court.objects.create(name=fname,mobile=phone,email=email,location=location)
         x.save()
-        send_mail(
-            'counsultandcounsel',
-            'Admin,A new courthiring request has come, Please check',
-            settings.EMAIL_HOST_USER,
-            ['sumanpatra68@gmail.com',
-            'bhanup997@gmail.com'],
-            fail_silently=False
-            )
-    return render(request,'lastcall.html')
+    return render(request,'courtformsubmit.html')
 
 def itsolution(request):
     return render(request,'itsolution.html')
 
-def booksession(request):
+def itsolutionrequest(request):
     if request.method == 'POST':
         name = request.POST.get('username')
         phone = request.POST.get('mobileno')
         email = request.POST.get('email')
         x=solution.objects.create(name=name,mobile=phone,email=email)
         x.save()
-        send_mail(
-            'counsultandcounsel',
-            'Admin,A new project request has come, Please check',
-            settings.EMAIL_HOST_USER,
-            ['sumanpatra68@gmail.com',
-            'bhanup997@gmail.com'],
-            fail_silently=False
-            )
         return render(request,'thank.html')
     else:
         return render(request,'solution.html')
 
+def hireme(request):
+    return render(request,'hireme.html')
 
+def hiringform(request):
+    if request.method == 'POST':
+        fname = request.POST.get('fname')
+        email = request.POST.get('lname')
+        phone = request.POST.get('phone')
+        area = request.POST.get('area')
+        x=hiring_mentor.objects.create(name=fname,email=email,area=area,mobile=phone)
+        x.save()
+        return render(request,'hiringform.html')
+    else:
+        return render(request,'ok.html')

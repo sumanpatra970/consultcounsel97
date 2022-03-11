@@ -9,17 +9,18 @@
     <meta name="description" content="We bring you the best consulting and counselling services irrespective of field with the help of renowned professionals in that particular concerned area">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4004445835078972" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'master.css' %}">
     <link rel="icon" href="{% static 'COUNC.jpeg' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Consult&Counsel</title>
 </head>
 <body>
-    <div class="container-fluid ll">
+    <div class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-sm-12">
-                <a href="/"><img src="{% static 'pp.jpeg'%}" alt="Avatar" width="100%" height="120%"></a>
+                <a href="/"><img src="{% static 'pp.jpeg'%}" alt="Avatar" class="logo"></a>
             </div>
-        </div><br>
+        </div>
         <div class="row justify-content-around">
             <div class="col-xs-1">
                 <div class="dropdown">
@@ -31,34 +32,34 @@
                         <a href="musician">MUSIC</a>
                         <a href="education">EDUCATION</a>
                         <a href="fashion">FASHION</a>
-                        <a href="professional">EXPERT</a>
+                        <a href="professional">PROFESSIONAL</a>
                         <a href="fitness">FITNESS</a>
-                        <a href="vlogger">BLOGGING</a>
+                        <a href="blogger">BLOGGING</a>
                         <a href="others">OTHERS</a>
                     </div>
                 </div>
             </div>
             <div class="col-xs-1">
                 <div class="dropdown">
-                    <a href="session"><button class="dropbtn btn btn-primary">SESSION</button></a>
+                    <button class="dropbtn btn btn-primary">SESSION</button>
                     <div class="dropdown-content">
                         <a href="session">BOOK SESSION</a>
                     </div>
                 </div>
             </div>
             <div class="col-xs-1">
-               <div class="dropdown">
-                    <a href="virtualcourt"><button class="dropbtn btn btn-primary">COURT</button></a>
-                     <div class="dropdown-content">
+                <div class="dropdown">
+                    <button class="btn btn-primary">COURT</button>
+                    <div class="dropdown-content">
                         <a href="virtualcourt">FILE A CASE</a>
                     </div>
                 </div>
             </div>
             <div class="col-xs-1">
                 <div class="dropdown">
-                    <a href="volunter"><button class="dropbtn btn btn-primary">REGISTER</button></a>
+                    <button class="dropbtn btn btn-primary">REGISTER</button>
                     <div class="dropdown-content">
-                        <a href="volunter">JOIN AS A MENTOR</a>
+                        <a href="join-as-mentor">JOIN AS A MENTOR</a>
                     </div>
                 </div>
             </div>
@@ -73,59 +74,57 @@
                 </div>
             </div>
             <div class="col-xs-1">
-               <div class="dropdown">
-                    <a href="hireme"><button class="dropbtn btn btn-primary">HIRING</button></a>
+                <div class="dropdown">
+                    <button class="dropbtn btn btn-primary">HIRING</button>
                     <div class="dropdown-content">
                         <a href="hireme">HIRE AN EXPERT</a>
                     </div>
                 </div>
             </div>
-            <div class="dropdown">
-                <a href="startnow"><button class="dropbtn btn btn-primary">COURSE</button></a>
-                <div class="dropdown-content">
-                        <a href="startnow">BOOK NOW</a>
+            <div class="col-xs-1">
+                <div class="dropdown">
+                    <button class="dropbtn btn btn-primary">COURSE</button>
+                    <div class="dropdown-content">
+                        <a href="hrcourse">HR COURSE</a>
+                        <a href="softwarecourse">SOFTWARE TRAINING</a>
+                        <a href="skilldevelopment">SKILL DEVELOPMENT</a>
                     </div>
+                </div>
             </div>
             <div class="col-xs-1">
                 <div class="dropdown">
-                    <a href="testimony"><button class="dropbtn btn btn-primary">SOLUTION</button></a>
+                    <button class="dropbtn btn btn-primary">SOLUTION</button>
                     <div class="dropdown-content">
                         <a href="itsolution">DIGITAL SOLUTION</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br>
+    </div><hr>
     {% block content%}
     {% endblock content%}
-    <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6 pox">
-            <a href="iimcalcutta-project"><h4>IIM-Calcutta Report On Consult&Counsel</h4></a>
-        </div>
-    </div>
-    <div class="container-fluid llm">
+    <hr>
+    <div class="container-fluid footer">
         <div class="row">
-            <div class="col-md-2 pox">
-                <p class="kl">Legal</p>
-                <a href="privacy"><p class="kk">Privacy</P></a>
-                <a href="policy"><p class="kk">Policy</P></a>
-                <a href="about"><p class="kk">About us</p></a>
+            <div class="col-md-2 align">
+                <p class="footerlink">Legal</p>
+                <a href="privacy"><p class="textsize">Privacy</P></a>
+                <a href="policy"><p class="textsize">Policy</P></a>
+                <a href="about"><p class="textsize">About us</p></a>
             </div>
-            <div class="col-md-2 pox">
-                <p class="kl">Links</p>
-                <a href="support"><p class="kk">Contact us</P></a>
-                <a href="career"><p class="kk">Career</P></a>
-                <a href="donation"><p class="kk">Donation</P></a>
+            <div class="col-md-2 align">
+                <p class="footerlink">Links</p>
+                <a href="support"><p class="textsize">Contact us</P></a>
+                <a href="career"><p class="textsize">Career</P></a>
+                <a href="donation"><p class="textsize">Donation</P></a>
             </div>
-            <div class="col-md-2 pox">
-                <p class="kl">Partners</p>
-                <a href="https://vishuddhiyogastudio.business.site/?utm_source=gmb&utm_medium=referral"><p class="kk">Vishuddhi Yoga Studio</p></a>
-                <a href="https://thehrsuite.wixsite.com/thehrsuite"><p class="kk">The HR Suite</a>
+            <div class="col-md-2 align">
+                <p class="footerlink">Partners</p>
+                <a href="https://vishuddhiyogastudio.business.site/?utm_source=gmb&utm_medium=referral"><p class="textsize">Vishuddhi Yoga Studio</p></a>
+                <a href="https://thehrsuite.wixsite.com/thehrsuite"><p class="textsize">The HR Suite</a>
             </div>
-            <div class="col-md-3 pox">
-                <p class="kl">Social account</p>
+            <div class="col-md-3 align">
+                <p class="footerlink">Social account</p>
                 <div class="row">
                     <div class="col-12">
                         <a href="https://m.facebook.com/Consult-Counsel-117588793422169/"><i class="fab fa-facebook-square" style="font-size: 2.73em"></i></a>
@@ -137,15 +136,15 @@
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-sm-8"><br>
-                        <a href="feedback"><p class="kk pox">Feedback</p></a>
+                        <a href="feedback"><p class="textsize align">Feedback</p></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pox">
-                <p class="kl">Office address</p>
+            <div class="col-md-3 align">
+                <p class="footerlink">Office address</p>
                 <i class='fas fa-home' style='font-size:25px'></i>
-                <p class="kk sl">Ejipura,Kormangala,Bangalore</p>
-                <p class="kk sl">Railway colony,Ramagundam,Telangana</p>
+                <p class="textsize sl">Ejipura,Kormangala,Bangalore</p>
+                <p class="textsize sl">Railway colony,Ramagundam,Telangana</p>
             </div>
         </div>
     </div>

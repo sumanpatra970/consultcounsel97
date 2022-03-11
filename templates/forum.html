@@ -3,28 +3,18 @@
 {% load static%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'basic.css' %}">
-    <meta name="author" content="suman">
-    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup">
-    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
-    <title>FORUM SECTION</title>
 </head>
 <body>
     {% block content %}
-    <div class="container-fluid lll">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <h3 class="kk">Q .{{t}}</h3>
-                <h3 class="kk">Answer by expert:<h3>
-                <h3 class="kk">{{o}}</h3>
+                <h3 class="textsize">Q .{{t}}</h3>
+                <h3 class="textsize">Answer by expert:<h3>
+                <h3 class="textsize">{{o}}</h3>
                 {%if request.user.is_superuser%}
-                <h3 class="kk">Admin,you can write your answer</h3>
+                <h3 class="textsize">Admin,you can write your answer</h3>
                 {%endif%}
             </div>
         </div>
@@ -37,15 +27,15 @@
                 <form action="/reply/{{g}}/" method="POST" class="form-group">
                     {%csrf_token%}
                     {%for i in fm%}
-                    <p class="kk">{{i}}</p>
+                    <p class="textsize">{{i}}</p>
                     {%endfor%}
                     <button type="submit" class="btn btn-success">SUBMIT</button>
                 {%endif%}
-                <a href="/"><h3 class="kk pox">CLICK HERE TO GO HOME</h3></a>
+                <a href="/"><h3 class="textsize align">CLICK HERE TO GO HOME</h3></a>
                 </form>
             </div>
         </div>
-    </div><br>
+    </div>
     {% endblock content %}
 </body>
 </html>

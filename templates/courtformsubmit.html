@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <img src="{% static 'court2.jpeg'%}" class="best-img">
+                <p  class="textsize">Thank you for booking.Our team will reach out you soon.Till then Stay safe and stay happy.</p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 align">
+                <img src="{% static 'soumya_prusti.jpg'%}" class='mentor-self-image'><br>
+                <h3>Soumya Prusti</h3>
+                <h3>Architect & Interior Designer</h3>
+                <h3>prustysoumya1996@gmail.com</h3>
+                <p class="textsize">
+                    Experienced architect and interior designer with hands on experience and good knowledge of spatial design, furnishing and choosing the best for your space.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

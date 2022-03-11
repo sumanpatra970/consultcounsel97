@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 align">
+            <br>
+            <a href="/mentors"><div class="textsize">Please visit mentor page to see all our mentors</div></a>
+            <p class="textsize">Thank you for your request. We will reach out to you. For instant help call 7750048275</p>
+            <a href="/"><button class="btn btn-warning">Home Page</button></a><br>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

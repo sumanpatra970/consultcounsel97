@@ -1,5 +1,38 @@
 from django.shortcuts import render
 
+def mentor(request):
+    return render(request,'option.html')
+
+def art(request):
+    return render(request,'art.html')
+
+def dancer(request):
+    return render(request,'dancer.html')
+
+def music(request):
+    return render(request,'music.html')
+
+def professional(request):
+    return render(request,'professional.html')
+
+def others(request):
+    return render(request,'others.html')
+
+def blogger(request):
+    return render(request,'blogger.html')
+
+def fashion(request):
+    return render(request,'fashion.html')
+
+def education(request):
+    return render(request,'education.html')
+
+def fitness(request):
+    return render(request,'fitness.html')
+
+def sports(request):
+    return render(request,'sports.html')
+
 def shree(request):
     return render(request,'mentor/shree.html')
 
@@ -121,7 +154,7 @@ def darshini(request):
     return render(request,'mentor/darshini.html')
 
 def jita(request):
-    return render(request,'jita.html')
+    return render(request,'mentor/jita.html')
 
 def smita(request):
     return render(request,'mentor/smita.html')
@@ -156,8 +189,8 @@ def abhinash(request):
 def abhipsa(request):
     return render(request,'mentor/abhipsa.html')
 
-def amit_patjoshi(request):
-    return render(request,'mentor/amit_patjoshi.html')
+def amitpatjoshi(request):
+    return render(request,'mentor/amitpatjoshi.html')
 
 def richa(request):
     return render(request,'mentor/richa.html')
@@ -168,8 +201,8 @@ def priynkabrahama(request):
 def ajay(request):
     return render(request,'mentor/ajay.html')
 
-def soumya_prusti(request):
-    return render(request,'mentor/soumya_prusti.html')
+def soumyaprusti(request):
+    return render(request,'mentor/soumyaprusti.html')
 
 def tikeshwar(request):
     return render(request,'mentor/tikeshwar.html')

@@ -3,34 +3,18 @@
 {%load static%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="suman">
-    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup best">
-    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
-    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'basic.css' %}">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-    <style>
-        p{
-          color:red;
-        }
-        </style>
-    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
-
-    <title>SESSION</title>
 </head>
 <body>
     {% block content %}
-    <div class="container-fluid lll">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-5">
-                <img src="{% static 'court1.jpeg'%}" width="100%" height="360px">
-                <div class="pox"><a href="lastcall"><button class="btn btn-dark">ENTER VIRTUAL COURT </button></a></div>
+                <img src="{% static 'court1.jpeg'%}" class="court-img">
+                <div class="align"><a href="courtform"><button class="btn btn-dark space-button">ENTER VIRTUAL COURT </button></a></div>
             </div>
             <div class="col-md-5">
-                <h5 class="pox cs">VIRTUAL COURT PROCESS</h5>
+                <h5 class="align section-heading">VIRTUAL COURT PROCESS</h5>
                 <h6>1.We get request from the client and we discuss with them to figure out the exact problem.</p>
                 <h6>2.We connect with second party through our client and get their confirmation.</p>
                 <h6>3.We appoint an Expert depending upon the scenario and based on acceptance of both the parties.</p>
@@ -38,7 +22,7 @@
                 <h6>5.We discuss in presence of an expert to find out the best possible solution for both the parties.</p>
                 <h6>6.After that, We close the case, make a certified agreement and we make sure everything is going well by following up.</p>
                 <p>Note:Any type of personal information/data are always secured and confidential with us. We do not share such information anywhere.</p>
-            </div><br>
+            </div>
         </div>
     </div>
     {% endblock content %}

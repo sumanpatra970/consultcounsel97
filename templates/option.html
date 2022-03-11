@@ -1,808 +1,796 @@
 <!DOCTYPE html>
+{% extends 'base.html'%}
 {% load static%}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="suman">
-    <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture">
-    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
-    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'next.css' %}">
-    <link rel="icon" href="{% static 'COUNC.jpeg' %}">
-    <title>MENTORS</title>
 </head>
 <body>
-    <div class="container-fluid ll">
-        <div class="row justify-content-around">
-            <div class="col-sm-12">
-                <a href="/"><img src="{% static 'pp.jpeg'%}" width="100%" height="110%"></a>
-            </div>
-        </div><br>
-    <div class="container-fluid lll">
-        <h2 class="pox lk">&#9829;OUR MENTORS&#9829;</h2>
+    {% block content %}
+    <div class="container-fluid">
+        <h2 class="align mentorheading-color">&#9829;OUR MENTORS&#9829;</h2>
         <div class="row">
             <div class="col-sm-3">
-                <img src="{% static 'abhijit.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Abhijit</h3>
-                <h3 class="kk">Fitness coach & Blogger</h3>
+                <img src="{% static 'abhijit.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Abhijit</h3>
+                <h3 class="textsize">Fitness coach & Blogger</h3>
                 <a href="abhijit"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'jyoti_.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Jyoti</h3>
-                <h3 class="kk">Storyteller</h3>
+                <img src="{% static 'jyoti_.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Jyoti</h3>
+                <h3 class="textsize">Storyteller</h3>
                 <a href="jyoti"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'radhakant.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Radhakant</h3>
-                <h3 class="kk">Singer</h3>
+                <img src="{% static 'radhakant.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Radhakant</h3>
+                <h3 class="textsize">Singer</h3>
                 <a href="radhakant"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'pragati.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Pragati</h3></h3>
-                <h3 class="kk">Content Curator & Lifestyle Blogger</h3>
+                <img src="{% static 'pragati.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Pragati</h3></h3>
+                <h3 class="textsize">Content Curator & Lifestyle Blogger</h3>
                 <a href="pragati"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'kabita.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Kavita</h3>
-                <h3 class="kk">Sketch Artist</h3>
+                <img src="{% static 'kabita.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Kavita</h3>
+                <h3 class="textsize">Sketch Artist</h3>
                 <a href="kavitha"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sumant1.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sumant</h3>
-                <h3 class="kk">Fashion blogger</h3>
+                <img src="{% static 'sumant1.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sumant</h3>
+                <h3 class="textsize">Fashion blogger</h3>
                 <a href="sumant"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'rahul.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Junior associate at SBI</h3>
-                <h3 class="kk">Rahul</h3>
+                <img src="{% static 'rahul.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Junior associate at SBI</h3>
+                <h3 class="textsize">Rahul</h3>
                 <a href="rahul"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Akankshya</h3>
-                <h3 class="kk">Application development Analyst & Dancer</h3>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Akankshya</h3>
+                <h3 class="textsize">Application development Analyst & Dancer</h3>
                 <a href="akanshya"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'juned.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Juned</h3>
-                <h3 class="kk">Literarian</h3>
+                <img src="{% static 'juned.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Juned</h3>
+                <h3 class="textsize">Literarian</h3>
                 <a href="juned"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'soni.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sony</h3>
-                <h3 class="kk">Health care expert</h3>
+                <img src="{% static 'soni.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sony</h3>
+                <h3 class="textsize">Health care expert</h3>
                 <a href="soni"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'neela2.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Koushik</h3></h3>
-                <h3 class="kk">Sports expert</h3>
+                <img src="{% static 'neela2.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Koushik</h3></h3>
+                <h3 class="textsize">Sports expert</h3>
                 <a href="koushik"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'nivi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Nivedita</h3>
-                <h3 class="kk">Yoga Expert</h3>
-                <a href="Nivi"><h4>Read more</h4></a>
+                <img src="{% static 'nivi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Nivedita</h3>
+                <h3 class="textsize">Yoga Expert</h3>
+                <a href="nivi"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'karan.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Karan</h3>
-                <h3 class="kk">Teacher & YouTuber</h3>
+                <img src="{% static 'karan.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Karan</h3>
+                <h3 class="textsize">Teacher & YouTuber</h3>
                 <a href="karan"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'bikram.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Bikram</h3>
-                <h3 class="kk">Doctor</h3>
+                <img src="{% static 'bikram.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Bikram</h3>
+                <h3 class="textsize">Doctor</h3>
                 <a href="bikram"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'goutam.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Goutam</h3>
-                <h3 class="kk">Masters from IIST in Quantum Physics</h3>
+                <img src="{% static 'goutam.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Goutam</h3>
+                <h3 class="textsize">Masters from IIST in Quantum Physics</h3>
                 <a href="goutam"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'shuvayu.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shuvayu</h3>
-                <h3 class="kk">Anchor & Software Engineer</h3>
-                <a href="shuv"><h4>Read more</h4></a>
+                <img src="{% static 'shuvayu.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shuvayu</h3>
+                <h3 class="textsize">Anchor & Software Engineer</h3>
+                <a href="shuvayu"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'shradha.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shraddha</h3>
-                <h3 class="kk">Content writer & personality development trainer</h3>
+                <img src="{% static 'shradha.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shraddha</h3>
+                <h3 class="textsize">Content writer & personality development trainer</h3>
                 <a href="shradha"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'pop.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sawan</h3>
-                <h3 class="kk">Poppin Dancer</h3>
+                <img src="{% static 'pop.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sawan</h3>
+                <h3 class="textsize">Poppin Dancer</h3>
                 <a href="popin"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'Lopa.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Lopamudra</h3>
-                <h3 class="kk">Photographer</h3>
-                <a href="loops"><h4>Read more</h4></a>
+                <img src="{% static 'Lopa.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Lopamudra</h3>
+                <h3 class="textsize">Photographer</h3>
+                <a href="lopamudra"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'Damini.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Damini</h3>
-                <h3 class="kk">Dance, fashion & Lifestyle expert</h3>
+                <img src="{% static 'Damini.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Damini</h3>
+                <h3 class="textsize">Dance, fashion & Lifestyle expert</h3>
                 <a href="damini"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sujata.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sujata</h3>
-                <h3 class="kk">Writer & Astrophysict</h3>
+                <img src="{% static 'sujata.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sujata</h3>
+                <h3 class="textsize">Writer & Astrophysict</h3>
                 <a href="sujata"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'aayushi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Aayushi</h3>
-                <h3 class="kk">Athlete,Dancer & Rugby player</h3>
-                <a href="aayushi"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sukesh</h3>
-                <h3 class="kk">Dentist</h3>
-                <a href="sukesh"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'shree.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shreeparna</h3>
-                <h3 class="kk">Classical dancer & Software techie</h3>
-                <a href="shree"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'piyush.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Prityush</h3>
-                <h3 class="kk">Environmentalist & Photographer</h3>
-                <a href="piyush"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'priynka.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Priyanka</h3>
-                <h3 class="kk">SAP ABAP/BODS Developer</h3>
-                <a href="priyanka"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'aahana.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Ahana</h3>
-                <h3 class="kk">Illustrator & Masters in VLSI</h3>
-                <a href="ahana"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'jawat.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Jahwat</h3>
-                <h3 class="kk">Agile,SAP ILM/ Basis Developer </h3>
-                <a href="jawat"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'rispa.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Rispa</h3>
-                <h3 class="kk">Odissi, Hip-hop Dancer & Actor</h3>
-                <a href="rispa"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'manan.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Manan</h3>
-                <h3 class="kk">Professional Guitarist</h3>
-                <a href="manan"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'swapnasu.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Swopnansu</h3>
-                <h3 class="kk">Solobackpaker</h3>
-                <a href="swopansu"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'srima.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Srimaa</h3>
-                <h3 class="kk">Architect</h3>
-                <a href="srimaa"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'soumya.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Soumya</h3>
-                <h3 class="kk">Masters in Business Administration & Artist</h3>
-                <a href="soumya"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'abhya.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Abhay</h3>
-                <h3 class="kk">Freelance Guitarist & Electronic music producer</h3>
-                <a href="abhya"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'anupam.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Anupam</h3>
-                <h3 class="kk">Sound Engineer, Music Producer & Drummer</h3>
-                <a href="anupam"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'anindya.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Anindya</h3>
-                <h3 class="kk">Mtech in Manufacturing Engineering,Motivator</h3>
-                <a href="anindya"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'krutee.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Krutee</h3>
-                <h3 class="kk">Odissi Dancer</h3>
-                <a href="krutee"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'sandhya.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sandhya</h3>
-                <h3 class="kk">Biotechie, Masters in Molecular Biology</h3>
-                <a href="sandhya"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'tejawsi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Tejaswi</h3>
-                <h3 class="kk">IT professional and Communicator</h3>
-                <a href="tejaswi"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Farheen</h3>
-                <h3 class="kk">Creative Artist & Software Techie</h3>
-                <a href="farheen"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Darshini</h3>
-                <h3 class="kk">Artist & Poetess</h3>
-                <a href="darshini"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Smita</h3>
-                <h3 class="kk">Cloud Operations Expert</h3>
-                <a href="smita"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'jita.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Jita</h3>
-                <h3 class="kk">MBA(hr) & Associate in CSIR-IMMT</h3>
-                <a href="jita"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sanjana</h3>
-                <h3 class="kk">Brand Marketing Expert</h3>
-                <a href="sanjana"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'padmini.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Padmini</h3>
-                <h3 class="kk">MBA & Agile Developer</h3>
-                <a href="padmini"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'saloni.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Saloni</h3>
-                <h3 class="kk">Article Writer & Blogger</h3>
-                <a href="saloni"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Abhipsa</h3>
-                <h3 class="kk">content curator</h3>
-                <a href="abhipsa"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'hardeek.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Hardeek</h3>
-                <h3 class="kk">SAP & ABAP Developer</h3>
-                <a href="hardeek"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'deekshith.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Deekshith</h3>
-                <h3 class="kk">Masters in Electronics</h3>
-                <a href="deekshith"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'animesh.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Animesh</h3>
-                <h3 class="kk">M Arch, Singer & Poet</h3>
-                <a href="animesh"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'bhartendu.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Bharatendu</h3>
-                <h3 class="kk">Digital Art Maker</h3>
-                <a href="bharatendu"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'abhinash.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Abhinash</h3>
-                <h3 class="kk">Film Maker</h3>
-                <a href="abhinash"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'richa.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Richa</h3>
-                <h3 class="kk">Masters in Architecture & Home Baker</h3>
-                <a href="richa"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'amit_patjoshi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Amit</h3>
-                <h3 class="kk">Healthcare consultant, Gamer & Computer Geek</h3>
-                <a href="amit_patjoshi"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'priynka_brahama.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Priyanka</h3>
-                <h3 class="kk">Quality assurance, Auditing & Customer Management</h3>
-                <a href="priynka_br"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ajay.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Ajay</h3>
-                <h3 class="kk">Fitness Trainer & Chess player</h3>
-                <a href="ajay"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'soumya_prusti.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Soumya</h3>
-                <h3 class="kk">Architect & Interior Designer</h3>
-                <a href="soumya_prusti"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'tikeswar.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Tikeshwar</h3>
-                <h3 class="kk">Stock Market Expert</h3>
-                <a href="tikeshwar"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'palavi_del.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Pallavi</h3>
-                <h3 class="kk">Software engineer</h3>
-                <a href="pallavi"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'sidhi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sidhi</h3>
-                <h3 class="kk">Application Development Analyst</h3>
-                <a href="sidhi"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'soumav.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Soumav</h3>
-                <h3 class="kk">Data Engineer & Product Integration</h3>
-                <a href="soumav"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Soumyashree</h3>
-                <h3 class="kk">Art & Sketch artist</h3>
-                <a href="soumyashree"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'asd.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Asd Shaik</h3>
-                <h3 class="kk">Maintenance and planning engineer</h3>
-                <a href="asd"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'prachii.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Prachi</h3>
-                <h3 class="kk">Ascii verification engineer</h3>
-                <a href="prachi"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'sushree.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sushree</h3>
-                <h3 class="kk">Architect & artist </h3>
-                <a href="sushree"><h4>Read more</h4></a>
-            </div>
-            <div class="col-sm-3">
-                <img src="{% static 'Ayushi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Ayushi</h3>
-                <h3 class="kk">IT Consultant & Dancer</h3>
+                <img src="{% static 'aayushi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Aayushi</h3>
+                <h3 class="textsize">Athlete,Dancer & Rugby player</h3>
                 <a href="ayushi"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'pallavii.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Pallavi</h3>
-                <h3 class="kk">Social Entrepreneur & Digital Influencer</h3>
-                <a href="pallavii"><h4>Read more</h4></a>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sukesh</h3>
+                <h3 class="textsize">Dentist</h3>
+                <a href="sukesh"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ayush.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Ayush</h3>
-                <h3 class="kk">Actor & Beatboxer</h3>
+                <img src="{% static 'shree.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shreeparna</h3>
+                <h3 class="textsize">Classical dancer & Software techie</h3>
+                <a href="shree"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'piyush.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Prityush</h3>
+                <h3 class="textsize">Environmentalist & Photographer</h3>
+                <a href="piyush"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'priynka.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Priyanka</h3>
+                <h3 class="textsize">SAP ABAP/BODS Developer</h3>
+                <a href="priyanka"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'aahana.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Ahana</h3>
+                <h3 class="textsize">Illustrator & Masters in VLSI</h3>
+                <a href="ahana"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'jawat.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Jahwat</h3>
+                <h3 class="textsize">Agile,SAP ILM/ Basis Developer </h3>
+                <a href="jawat"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'rispa.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Rispa</h3>
+                <h3 class="textsize">Odissi, Hip-hop Dancer & Actor</h3>
+                <a href="rispa"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'manan.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Manan</h3>
+                <h3 class="textsize">Professional Guitarist</h3>
+                <a href="manan"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'swapnasu.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Swopnansu</h3>
+                <h3 class="textsize">Solobackpaker</h3>
+                <a href="swopnansu"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'srima.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Srimaa</h3>
+                <h3 class="textsize">Architect</h3>
+                <a href="srimaa"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'soumya.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Soumya</h3>
+                <h3 class="textsize">Masters in Business Administration & Artist</h3>
+                <a href="soumya"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'abhya.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Abhay</h3>
+                <h3 class="textsize">Freelance Guitarist & Electronic music producer</h3>
+                <a href="abhya"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'anupam.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Anupam</h3>
+                <h3 class="textsize">Sound Engineer, Music Producer & Drummer</h3>
+                <a href="anupam"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'anindya.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Anindya</h3>
+                <h3 class="textsize">Mtech in Manufacturing Engineering,Motivator</h3>
+                <a href="anindya"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'krutee.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Krutee</h3>
+                <h3 class="textsize">Odissi Dancer</h3>
+                <a href="krutee"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'sandhya.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sandhya</h3>
+                <h3 class="textsize">Biotechie, Masters in Molecular Biology</h3>
+                <a href="sandhya"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'tejawsi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Tejaswi</h3>
+                <h3 class="textsize">IT professional and Communicator</h3>
+                <a href="tejaswi"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Farheen</h3>
+                <h3 class="textsize">Creative Artist & Software Techie</h3>
+                <a href="farheen"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Darshini</h3>
+                <h3 class="textsize">Artist & Poetess</h3>
+                <a href="darshini"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Smita</h3>
+                <h3 class="textsize">Cloud Operations Expert</h3>
+                <a href="smita"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'jita.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Jita</h3>
+                <h3 class="textsize">MBA(hr) & Associate in CSIR-IMMT</h3>
+                <a href="jita"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sanjana</h3>
+                <h3 class="textsize">Brand Marketing Expert</h3>
+                <a href="sanjana"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'padmini.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Padmini</h3>
+                <h3 class="textsize">MBA & Agile Developer</h3>
+                <a href="padmini"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'saloni.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Saloni</h3>
+                <h3 class="textsize">Article Writer & Blogger</h3>
+                <a href="saloni"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Abhipsa</h3>
+                <h3 class="textsize">content curator</h3>
+                <a href="abhipsa"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'hardeek.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Hardeek</h3>
+                <h3 class="textsize">SAP & ABAP Developer</h3>
+                <a href="hardeek"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'deekshith.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Deekshith</h3>
+                <h3 class="textsize">Masters in Electronics</h3>
+                <a href="deekshith"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'animesh.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Animesh</h3>
+                <h3 class="textsize">M Arch, Singer & Poet</h3>
+                <a href="animesh"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'bhartendu.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Bharatendu</h3>
+                <h3 class="textsize">Digital Art Maker</h3>
+                <a href="bharatendu"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'abhinash.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Abhinash</h3>
+                <h3 class="textsize">Film Maker</h3>
+                <a href="abhinash"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'richa.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Richa</h3>
+                <h3 class="textsize">Masters in Architecture & Home Baker</h3>
+                <a href="richa"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'amit_patjoshi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Amit</h3>
+                <h3 class="textsize">Healthcare consultant, Gamer & Computer Geek</h3>
+                <a href="amitpatjoshi"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'priynka_brahama.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Priyanka</h3>
+                <h3 class="textsize">Quality assurance, Auditing & Customer Management</h3>
+                <a href="priynkabrahama"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ajay.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Ajay</h3>
+                <h3 class="textsize">Fitness Trainer & Chess player</h3>
+                <a href="ajay"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'soumya_prusti.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Soumya</h3>
+                <h3 class="textsize">Architect & Interior Designer</h3>
+                <a href="soumyaprusti"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'tikeswar.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Tikeshwar</h3>
+                <h3 class="textsize">Stock Market Expert</h3>
+                <a href="tikeshwar"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'palavi_del.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Pallavi</h3>
+                <h3 class="textsize">Software engineer</h3>
+                <a href="pallavi"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'sidhi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sidhi</h3>
+                <h3 class="textsize">Application Development Analyst</h3>
+                <a href="sidhi"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'soumav.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Soumav</h3>
+                <h3 class="textsize">Data Engineer & Product Integration</h3>
+                <a href="soumav"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Soumyashree</h3>
+                <h3 class="textsize">Art & Sketch artist</h3>
+                <a href="soumyashree"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'asd.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Asd Shaik</h3>
+                <h3 class="textsize">Maintenance and planning engineer</h3>
+                <a href="asd"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'prachii.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Prachi</h3>
+                <h3 class="textsize">Ascii verification engineer</h3>
+                <a href="prachi"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'sushree.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sushree</h3>
+                <h3 class="textsize">Architect & artist </h3>
+                <a href="sushree"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'Ayushi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Ayushi</h3>
+                <h3 class="textsize">IT Consultant & Dancer</h3>
+                <a href="ayushi"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'pallavii.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Pallavi</h3>
+                <h3 class="textsize">Social Entrepreneur & Digital Influencer</h3>
+                <a href="pallavipriya"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'ayush.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Ayush</h3>
+                <h3 class="textsize">Actor & Beatboxer</h3>
                 <a href="ayush"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'anukta.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Anukta</h3>
-                <h3 class="kk">Actor, Dancer & Content Creator</h3>
+                <img src="{% static 'anukta.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Anukta</h3>
+                <h3 class="textsize">Actor, Dancer & Content Creator</h3>
                 <a href="anukta"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'shyama.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shyamasamarpita</h3>
-                <h3 class="kk">Actor & Youtuber</h3>
-                <a href="ssn"><h4>Read more</h4></a>
+                <img src="{% static 'shyama.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shyamasamarpita</h3>
+                <h3 class="textsize">Actor & Youtuber</h3>
+                <a href="shyama"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'Nirali.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Nirali</h3>
-                <h3 class="kk">HR professional & Psychologist</h3>
+                <img src="{% static 'Nirali.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Nirali</h3>
+                <h3 class="textsize">HR professional & Psychologist</h3>
                 <a href="nirali"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'deeja.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Deeja</h3>
-                <h3 class="kk">SAP consultant</h3>
+                <img src="{% static 'deeja.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Deeja</h3>
+                <h3 class="textsize">SAP consultant</h3>
                 <a href="deeja"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'deepa.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Deepa</h3>
-                <h3 class="kk">Mechanical Maintenance Engineer</h3>
+                <img src="{% static 'deepa.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Deepa</h3>
+                <h3 class="textsize">Mechanical Maintenance Engineer</h3>
                 <a href="deepa"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ppriyanka.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Priyanka</h3>
-                <h3 class="kk">Calligrapher, Writer & Poetess</h3>
-                <a href="pp"><h4>Read more</h4></a>
+                <img src="{% static 'ppriyanka.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Priyanka</h3>
+                <h3 class="textsize">Calligrapher, Writer & Poetess</h3>
+                <a href="priyankapoetess"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'aditya.jfif'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Aditya</h3>
-                <h3 class="kk">Devops Engineer</h3>
+                <img src="{% static 'aditya.jfif'%}" class="best-img"><br><br>
+                <h3 class="textsize">Aditya</h3>
+                <h3 class="textsize">Devops Engineer</h3>
                 <a href="adityaoli"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'chetana.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Chetna</h3>
-                <h3 class="kk">Beauty blogger</h3>
+                <img src="{% static 'chetana.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Chetna</h3>
+                <h3 class="textsize">Beauty blogger</h3>
                 <a href="chetna"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'prasanna.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Prasanna</h3>
-                <h3 class="kk">Oracle Developer, Quiling & Thread Artist.</h3>
+                <img src="{% static 'prasanna.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Prasanna</h3>
+                <h3 class="textsize">Oracle Developer, Quiling & Thread Artist.</h3>
                 <a href="prasanna"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'albin.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Albin</h3>
-                <h3 class="kk">Civil engineer</h3>
+                <img src="{% static 'albin.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Albin</h3>
+                <h3 class="textsize">Civil engineer</h3>
                 <a href="albin"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'subashis.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Subashis</h3>
-                <h3 class="kk">UX/UI Designer, Product Designer</h3>
+                <img src="{% static 'subashis.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Subashis</h3>
+                <h3 class="textsize">UX/UI Designer, Product Designer</h3>
                 <a href="subashis"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'trilochan.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Trilochan</h3>
-                <h3 class="kk">.NET Developer, IOT & Blockchain Expert</h3>
+                <img src="{% static 'trilochan.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Trilochan</h3>
+                <h3 class="textsize">.NET Developer, IOT & Blockchain Expert</h3>
                 <a href="trilochan"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'nikhil.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Nikhil</h3>
-                <h3 class="kk">MTech in Mechatronics and automation</h3>
+                <img src="{% static 'nikhil.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Nikhil</h3>
+                <h3 class="textsize">MTech in Mechatronics and automation</h3>
                 <a href="nikhil"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'jayesh2.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Jayesh</h3>
-                <h3 class="kk">Management Graduate at IIM Sirmaur. </h3>
+                <img src="{% static 'jayesh2.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Jayesh</h3>
+                <h3 class="textsize">Management Graduate at IIM Sirmaur. </h3>
                 <a href="jayesh"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'asmita.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Asmita</h3>
-                <h3 class="kk">Gardener, Cook & Fitness Artist</h3>
+                <img src="{% static 'asmita.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Asmita</h3>
+                <h3 class="textsize">Gardener, Cook & Fitness Artist</h3>
                 <a href="asmita"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'saswat.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Saswat</h3>
-                <h3 class="kk">Career and Business Management</h3>
+                <img src="{% static 'saswat.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Saswat</h3>
+                <h3 class="textsize">Career and Business Management</h3>
                 <a href="saswat"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'manisha.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Manisha</h3>
-                <h3 class="kk">Aptitude & Reasoning Guide</h3>
+                <img src="{% static 'manisha.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Manisha</h3>
+                <h3 class="textsize">Aptitude & Reasoning Guide</h3>
                 <a href="manisha"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'rishi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Rishi</h3>
-                <h3 class="kk">Guitar Player</h3>
+                <img src="{% static 'rishi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Rishi</h3>
+                <h3 class="textsize">Guitar Player</h3>
                 <a href="rishi"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'rudra.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Rudra</h3>
-                <h3 class="kk">Choreographer in Hip-hop & Locking</h3>
+                <img src="{% static 'rudra.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Rudra</h3>
+                <h3 class="textsize">Choreographer in Hip-hop & Locking</h3>
                 <a href="rudra"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'pooja.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Pooja</h3>
-                <h3 class="kk">Architect</h3>
+                <img src="{% static 'pooja.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Pooja</h3>
+                <h3 class="textsize">Architect</h3>
                 <a href="pooja"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'tanaya.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Tannya</h3>
-                <h3 class="kk">Mechanical Engineer</h3>
+                <img src="{% static 'tanaya.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Tannya</h3>
+                <h3 class="textsize">Mechanical Engineer</h3>
                 <a href="tannya"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'somensoni.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Somen Soni</h3>
-                <h3 class="kk">Oracle Application Developer</h3>
+                <img src="{% static 'somensoni.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Somen Soni</h3>
+                <h3 class="textsize">Oracle Application Developer</h3>
                 <a href="somensoni"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Haritha</h3>
-                <h3 class="kk">IT professional & Fitness Expert</h3>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Haritha</h3>
+                <h3 class="textsize">IT professional & Fitness Expert</h3>
                 <a href="haritha"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'gangaprasad.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Gangaprasad</h3>
-                <h3 class="kk">GATE/ESE & Data Analytics Expert</h3>
+                <img src="{% static 'gangaprasad.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Gangaprasad</h3>
+                <h3 class="textsize">GATE/ESE & Data Analytics Expert</h3>
                 <a href="gangaprasad"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'amal.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Amal</h3>
-                <h3 class="kk">Integration Analyst & Academic Counsellor</h3>
+                <img src="{% static 'amal.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Amal</h3>
+                <h3 class="textsize">Integration Analyst & Academic Counsellor</h3>
                 <a href="amal"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'oshi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">SK Oshi</h3>
-                <h3 class="kk">Lifestyle counsellor</h3>
+                <img src="{% static 'oshi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">SK Oshi</h3>
+                <h3 class="textsize">Lifestyle counsellor</h3>
                 <a href="oshi"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'lipsa.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Lipsa</h3>
-                <h3 class="kk">MBA & Book Reviewer/Blogger</h3>
-                <a href="lipsaa"><h4>Read more</h4></a>
+                <img src="{% static 'lipsa.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Lipsa</h3>
+                <h3 class="textsize">MBA & Book Reviewer/Blogger</h3>
+                <a href="lipsa"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sanju.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sanju</h3>
-                <h3 class="kk">Project & Business Ideas Expert</h3>
+                <img src="{% static 'sanju.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sanju</h3>
+                <h3 class="textsize">Project & Business Ideas Expert</h3>
                 <a href="sanju"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ananda.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Anand</h3>
-                <h3 class="kk">Software Developer and Sports Enthusiastic</h3>
+                <img src="{% static 'ananda.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Anand</h3>
+                <h3 class="textsize">Software Developer and Sports Enthusiastic</h3>
                 <a href="anand"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'smaroki.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Smaroki</h3>
-                <h3 class="kk">Singer & Dancer</h3>
+                <img src="{% static 'smaroki.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Smaroki</h3>
+                <h3 class="textsize">Singer & Dancer</h3>
                 <a href="smaroki"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'werika.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Werika</h3>
-                <h3 class="kk">Masters in Water Resource Engineering</h3>
+                <img src="{% static 'werika.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Werika</h3>
+                <h3 class="textsize">Masters in Water Resource Engineering</h3>
                 <a href="werika"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'pechetti.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sri valli P</h3>
-                <h3 class="kk">Agricultural Expert</h3>
+                <img src="{% static 'pechetti.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sri valli P</h3>
+                <h3 class="textsize">Agricultural Expert</h3>
                 <a href="srivalli"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">BV Aditya</h3>
-                <h3 class="kk">SOC analyst</h3>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">BV Aditya</h3>
+                <h3 class="textsize">SOC analyst</h3>
                 <a href="bvaditya"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ritu.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Ritu</h3>
-                <h3 class="kk">Entrepreneur</h3>
+                <img src="{% static 'ritu.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Ritu</h3>
+                <h3 class="textsize">Entrepreneur</h3>
                 <a href="ritu"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'chiranjevi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Chiranjeeb</h3>
-                <h3 class="kk">Business Development Executive</h3>
+                <img src="{% static 'chiranjevi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Chiranjeeb</h3>
+                <h3 class="textsize">Business Development Executive</h3>
                 <a href="chiranjeeb"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'boaz.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Abishakth</h3>
-                <h3 class="kk">Master of Science in Industrial Engineering</h3>
+                <img src="{% static 'boaz.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Abishakth</h3>
+                <h3 class="textsize">Master of Science in Industrial Engineering</h3>
                 <a href="boaz"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'apruba.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Apruba</h3>
-                <h3 class="kk">Social media & Food Blogger</h3>
+                <img src="{% static 'apruba.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Apruba</h3>
+                <h3 class="textsize">Social media & Food Blogger</h3>
                 <a href="apruba"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'rahul2.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Rahul</h3>
-                <h3 class="kk">Cybersecurity Expert</h3>
-                <a href="rahul2"><h4>Read more</h4></a>
+                <img src="{% static 'rahul2.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Rahul</h3>
+                <h3 class="textsize">Cybersecurity Expert</h3>
+                <a href="rahulcyberexpert"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sarthak.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sarthak</h3>
-                <h3 class="kk">Career guide & Counsellor</h3>
+                <img src="{% static 'sarthak.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sarthak</h3>
+                <h3 class="textsize">Career guide & Counsellor</h3>
                 <a href="sarthak"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'nimai.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Nimai</h3>
-                <h3 class="kk">Government exams expert</h3>
+                <img src="{% static 'nimai.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Nimai</h3>
+                <h3 class="textsize">Government exams expert</h3>
                 <a href="nimai"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sushil.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sushil</h3>
-                <h3 class="kk">veterinarian</h3>
+                <img src="{% static 'sushil.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sushil</h3>
+                <h3 class="textsize">veterinarian</h3>
                 <a href="sushil"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'suniti (2).jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Suniti</h3>
-                <h3 class="kk">IIM-Almuni</h3>
+                <img src="{% static 'suniti.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Suniti</h3>
+                <h3 class="textsize">IIM-Almuni</h3>
                 <a href="suniti"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sushant.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sushant</h3>
-                <h3 class="kk">Financial advisor</h3>
+                <img src="{% static 'sushant.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sushant</h3>
+                <h3 class="textsize">Financial advisor</h3>
                 <a href="sushant"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'raju.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Raju</h3>
-                <h3 class="kk">Freelance Dance Artist</h3>
+                <img src="{% static 'raju.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Raju</h3>
+                <h3 class="textsize">Freelance Dance Artist</h3>
                 <a href="raju"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'shruti.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shruti</h3>
-                <h3 class="kk">Architectural Designer</h3>
+                <img src="{% static 'shruti.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shruti</h3>
+                <h3 class="textsize">Architectural Designer</h3>
                 <a href="shruti"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sambit.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Sambit</h3>
-                <h3 class="kk">Assitant manager at Zindal</h3>
+                <img src="{% static 'sambit.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Sambit</h3>
+                <h3 class="textsize">Assitant manager at Zindal</h3>
                 <a href="sambit"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'rashmi.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Rashmi</h3>
-                <h3 class="kk">Urban and Regional planning Expert</h3>
+                <img src="{% static 'rashmi.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Rashmi</h3>
+                <h3 class="textsize">Urban and Regional planning Expert</h3>
                 <a href="rashmi"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'utkal.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Utkal</h3>
-                <h3 class="kk">Competitive Exams Guide</h3>
+                <img src="{% static 'utkal.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Utkal</h3>
+                <h3 class="textsize">Competitive Exams Guide</h3>
                 <a href="utkal"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Manasa</h3>
-                <h3 class="kk">Software engineer at JP Morgan</h3>
-                <a href="manasasu"><h4>Read more</h4></a>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Manasa</h3>
+                <h3 class="textsize">Software engineer at JP Morgan</h3>
+                <a href="manasa"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'jayshreeg.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Jayshree</h3>
-                <h3 class="kk">Fashion designer</h3>
+                <img src="{% static 'jayshreeg.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Jayshree</h3>
+                <h3 class="textsize">Fashion designer</h3>
                 <a href="jayshree"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'sutripathy.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shuvransu</h3>
-                <h3 class="kk">Travelling photography blogger</h3>
+                <img src="{% static 'sutripathy.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shuvransu</h3>
+                <h3 class="textsize">Travelling photography blogger</h3>
                 <a href="shuvransu"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'chetna_mike.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Chetana Milke</h3>
-                <h3 class="kk">Management trainee</h3>
+                <img src="{% static 'chetna_mike.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Chetana Milke</h3>
+                <h3 class="textsize">Management trainee</h3>
                 <a href="chetana"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Vishwanath</h3>
-                <h3 class="kk">Marketing Specialist and Professor</h3>
-                <a href="mrvish"><h4>Read more</h4></a>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Vishwanath</h3>
+                <h3 class="textsize">Marketing Specialist and Professor</h3>
+                <a href="vishwanath"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'aman.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Aman</h3>
-                <h3 class="kk">Web developer</h3>
+                <img src="{% static 'aman.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Aman</h3>
+                <h3 class="textsize">Web developer</h3>
                 <a href="aman"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'indu.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Indu</h3>
-                <h3 class="kk">Test engineer</h3>
+                <img src="{% static 'indu.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Indu</h3>
+                <h3 class="textsize">Test engineer</h3>
                 <a href="indu"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'swadesh.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Swadesh</h3>
-                <h3 class="kk">NGO Program manager</h3>
+                <img src="{% static 'swadesh.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Swadesh</h3>
+                <h3 class="textsize">NGO Program manager</h3>
                 <a href="swadesh"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'swaraj.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Swaraj</h3>
-                <h3 class="kk">Yoga and diet consultant</h3>
+                <img src="{% static 'swaraj.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Swaraj</h3>
+                <h3 class="textsize">Yoga and diet consultant</h3>
                 <a href="swaraj"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'ping.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Kavya</h3>
-                <h3 class="kk">Assitant manager</h3>
+                <img src="{% static 'ping.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">Kavya</h3>
+                <h3 class="textsize">Assitant manager</h3>
                 <a href="kavya"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'shilky.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Shilky</h3>
-                <h3 class="kk">Insta blogger</h3>
+                <img src="{% static 'shilky.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Shilky</h3>
+                <h3 class="textsize">Insta blogger</h3>
                 <a href="shilky"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'radha.png'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">RD DAS</h3>
-                <h3 class="kk">Textile designer</h3>
-                <a href="radha"><h4>Read more</h4></a>
+                <img src="{% static 'radha.png'%}" class="best-img"><br><br>
+                <h3 class="textsize">RD DAS</h3>
+                <h3 class="textsize">Textile designer</h3>
+                <a href="govind"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'Ekta.jpg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Ekta</h3>
-                <h3 class="kk">Software engineer at Boeing</h3>
+                <img src="{% static 'Ekta.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Ekta</h3>
+                <h3 class="textsize">Software engineer at Boeing</h3>
                 <a href="ekta"><h4>Read more</h4></a>
             </div>
             <div class="col-sm-3">
-                <img src="{% static 'pallavi2.jpeg'%}" width="100%" height=300px><br><br>
-                <h3 class="kk">Pallavi</h3>
-                <h3 class="kk">Professional eloquent</h3>
+                <img src="{% static 'pallavi2.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Pallavi</h3>
+                <h3 class="textsize">Professional eloquent</h3>
                 <a href="pallavi-eloquent"><h4>Read more</h4></a>
             </div>
         </div>
     </div>
+    {% endblock content %}
 </body>
 </html>
