@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .models import Forum,Primemember,Transaction,Transcatid,Course,Court,Solution,Hirementor
 from career import settings
 from django.contrib import auth
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect,HttpResponse
 from .Form import question_form,answer_form,volunter_form
 import razorpay
+from .models import Forum,Primemember,Transaction,Transcatid,Course,Court,Solution,Hirementor
 
 def discussion(request):
     obj=Forum.objects.all()
@@ -59,7 +59,7 @@ def step3(request):
         return HttpResponseRedirect('login')
 
 def nextpay(request):
-    return HttpResponseRedirect('underconst')
+    return HttpResponseRedirect('underconstruction')
     if request.method == "GET":
         return render(request, 'pay.html')
     else:
@@ -129,6 +129,9 @@ def callback(request):
         else:
             return  render(request,'master/ok.html')
 
+def underconstruction(request):
+    return render(request,'master/uc.html')
+
 def directpay(request):
     name=request.user
     return render(request,'master/directpay.html',{'name':name,'request':request})
@@ -177,13 +180,11 @@ def create_order(request):
             order_amount = 30000
         elif product == '3':
             order_amount = 40000
-        else:
-            order_amount=10000
         order_currency = 'INR'
         order_receipt = 'order_rcptid_11'
         notes = {'Shipping address': 'Bommanahalli, Bangalore'}
         client = razorpay.Client(auth=("rzp_live_T029oczISLBkmx", "hnEDgqWj3jOiHqOZfcksiVRG"))
-        response = client.order.create(dict(amount=order_amount/100, currency=order_currency, receipt=order_receipt, notes=notes, payment_capture='0'))
+        response = client.order.create(dict(amount=order_amount, currency=order_currency, receipt=order_receipt, notes=notes, payment_capture='0'))
         order_id = response['id']
         order_status = response['status']
         if order_status=='created':

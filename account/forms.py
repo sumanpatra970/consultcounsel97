@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm,UserChangeForm,PasswordChangeForm
 from django import forms
 from django.contrib.auth.models import User
+
 class account_creation_form(UserCreationForm):
     password1=forms.CharField(label="Password",widget=forms.PasswordInput(attrs={'class':'form-control space'}))
     password2=None

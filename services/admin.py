@@ -1,7 +1,7 @@
 from django.contrib import admin
-
 from .models import Forum,Transaction,Mentor,Primemember,Solution
 from .models import Transcatid,Course,Court,Hirementor
+
 class forum_tab(admin.ModelAdmin):
     list_display = ['made_on','question','email','answer','answer_set']
 
@@ -9,7 +9,7 @@ class mentor(admin.ModelAdmin):
     list_display = ['made_on','Name','Email','Mobileno','Profession','Mentor_Img']
 
 class Transcation_data(admin.ModelAdmin):
-    list_display = ['made_by','made_on','amount','order_id']
+    list_display = ['made_on','made_by','amount','order_id']
 
 class prime(admin.ModelAdmin):
     list_display = ['made_on','Name','Email','Mobileno','Plan','Refered','Query']

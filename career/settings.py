@@ -13,6 +13,8 @@ ALLOWED_HOSTS = ['127.0.0.1','consultcounsel.herokuapp.com','www.consultandcouns
 INSTALLED_APPS = [
     'core',
     'services',
+    'account',
+    'community',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,6 +63,7 @@ DATABASES = {
 db_from_env = dj_database_url.config(conn_max_age=600)
 
 DATABASES['default'].update(db_from_env)
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -88,14 +91,11 @@ USE_TZ = True
 
 SITE_ID=1
 
-
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
 staticfile=os.path.join(BASE_DIR,'staticfiles')
-
-x=5; 
 
 STATICFILES_DIRS=[staticfile]
 

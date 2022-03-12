@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+
 urlpatterns = [
     path('discussion',views.discussion),
     path('reply/<int:id>/',views.reply),
@@ -14,7 +15,8 @@ urlpatterns = [
     path('qr',views.qrdirect),
     path('razorpaygate', views.razorpaygate),
     path('confirm_order', views.create_order),
-    path('payment_status', views.payment_status,name = 'payment_status'),
+    path('payment_status', views.payment_status,
+    name='payment_status'),
     path('join-as-mentor',views.mentor),
     path('mentor-form',views.mentorform),
     path('startnow',views.startcourse),
@@ -31,4 +33,5 @@ urlpatterns = [
     path('itsolution-request-form',views.itsolutionrequest),
     path('hireme',views.hireme),
     path('hiring-mentor-done',views.hiringform),
+    path('underconstruction',views.underconstruction)
     ]

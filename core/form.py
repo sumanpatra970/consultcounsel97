@@ -1,6 +1,5 @@
 from django import forms
 from .models import Feedback
-
 from django.core.validators import FileExtensionValidator
 
 class feedbackform(forms.ModelForm):
@@ -10,7 +9,6 @@ class feedbackform(forms.ModelForm):
         widgets={'Name':forms.TextInput(attrs={'class':'form-control space'}),
                 'Email':forms.TextInput(attrs={'class':'form-control space'}),
                  'Query':forms.Textarea(attrs={'class':'form-control space'})}
-
 
 class digitalform(forms.Form):
     Name=forms.CharField(label="Name",widget=forms.TextInput(attrs={'class':'form-control sapce'}))
