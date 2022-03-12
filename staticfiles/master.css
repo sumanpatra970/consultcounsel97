@@ -8,6 +8,7 @@ video {
 button{
    font-size:18px;
 }
+
 .dropbtn {
    height: 40px;
    width: 90px;
@@ -51,6 +52,16 @@ a:link{
 }
 a:visited {
    color: #800000;
+}
+@media only screen and (max-width: 600px) { 
+   .logo{
+      width:100%;
+      height:500px;
+   }
+   .logo-space{
+      margin-top:5px;
+      margin-bottom:5px;
+   }
 }
 .align{
    text-align: center;
