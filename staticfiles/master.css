@@ -5,6 +5,9 @@ img {
 video {
    border-radius: 8px;
 }
+button{
+   font-size:18px;
+}
 .dropbtn {
    height: 40px;
    width: 90px;
