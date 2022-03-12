@@ -61,6 +61,9 @@ a:visited {
       margin-top:5px;
       margin-bottom:5px;
    }
+   button{
+      text-transform: capitalize;
+   }
 }
 .align{
    text-align: center;

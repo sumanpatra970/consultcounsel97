@@ -140,7 +140,7 @@ button{
       margin-bottom:5px;
    }
    button{
-      text-transform: lowercase;
+      text-transform: capitalize;
    }
 
 }
