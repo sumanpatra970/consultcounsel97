@@ -139,6 +139,10 @@ button{
       margin-top:5px;
       margin-bottom:5px;
    }
+   button{
+      text-transform: lowercase;
+   }
+
 }
 a:link{
    color:#800000;
