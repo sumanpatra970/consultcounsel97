@@ -151,6 +151,9 @@ button{
       font-size: 14px;
       border: none;
    }
+   .notification{
+      font-size: large;
+   }
 
 }
 a:link{

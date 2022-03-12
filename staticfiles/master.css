@@ -77,6 +77,10 @@ a:visited {
       width:100%;
       height:auto;
    }
+   .notification{
+      font-size: large;
+   }
+
 }
 .align{
    text-align: center;
@@ -111,6 +115,14 @@ a:visited {
 .section-img{
    width:100%;
    height:auto;
+}
+.notification{
+   color:#800000;
+   text-shadow: #999999;
+   font-size: x-large;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   text-align: center;
 }
 .paytmqr{
    width:100%;
