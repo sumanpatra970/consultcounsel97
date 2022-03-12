@@ -161,8 +161,19 @@ def summer(request):
             email = form.cleaned_data.get("Email")
             degree = form.cleaned_data.get("Degree")
             cv= request.FILES['resume']
-            print(name,mobile,email,degree,cv)
-            x=Internship.objects.create(name=name,email=email,mobile=mobile,field=degree,cv=cv)
+            checkbox1=request.POST.get('check1')
+            checkbox2=request.POST.get('check2')
+            if checkbox1=="on":
+                check1=True
+            else:
+                check1=False
+
+            if checkbox2=="on":
+                check1=True
+            else:
+                check2=False
+            print(name,mobile,email,degree,cv,checkbox1,checkbox2,check1,check2)
+            x=Internship.objects.create(name=name,email=email,mobile=mobile,field=degree,cv=cv,checkbox1=check1,checkbox2=check2)
             return render(request,'thank.html')
         else:
             print(form)

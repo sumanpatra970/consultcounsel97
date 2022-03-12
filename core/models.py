@@ -28,4 +28,6 @@ class Internship(models.Model):
     mobile = models.CharField(max_length=30,default="",null=True)
     name = models.CharField(max_length=30,default="",null=True)
     field = models.CharField(max_length=30,default="",null=True)
+    checkbox1 = models.BooleanField(default=False) 
+    checkbox2 = models.BooleanField(default=False) 
     cv = models.FileField(blank=True, upload_to='cv')

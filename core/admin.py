@@ -14,7 +14,7 @@ class Freesessionform(admin.ModelAdmin):
     list_display = ['made_on','name','email','mobile','field','doubt']
 
 class internshipp(admin.ModelAdmin):
-    list_display = ['made_on','name','email','mobile','field','cv']
+    list_display = ['made_on','name','email','mobile','field','checkbox1','checkbox2','cv']
 
 
 admin.site.register(Internship,internshipp)
