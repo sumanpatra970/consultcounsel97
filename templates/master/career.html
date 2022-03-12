@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="align">Digital market expert</h3>
+                <p class="textsize align">
+                    We are hiring a candidate who has experience of one year in digital marketing.
+                    SEO knowledge is must. Candidate having knowledge of website design will be prefered.
+                </p>
+                <p class="align textsize">Speciality: Blogging, Content Marketing, Online Marketing</p>
+                <p class="align textsize">job code:CC0001</p>
+                <div class="align">
+                    <a href="job-form"><button class="btn btn-dark">Apply now</button></a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="align">Customer executive</h3>
+                <p class="textsize align">
+                    We are hiring a candidate who has experience of one year in customer support.
+                    Good communication skill,Email writing skill and team work skill is must.
+                </p>
+                <p class="textsize align">Speciality: Excellent communication skill</p>
+                <p class="textsize align">job code:CC0002</p>
+                <div class="align">
+                    <a href="job-errorcode"><button class="btn btn-dark">Apply now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

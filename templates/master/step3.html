@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h3 class="align form-heading">STEP 3 OF 3</h3><br>
+                <h3 class="textsize align">Prime membership</h3>
+                <h3 class="textsize align">setup your payment</h3>
+                <h3 class="textsize align">Your membership starts as soon as you set up payment</h3><br>
+                <div class="row">
+                    <div class="col-sm-4 align"><a href="nextpay"><button class="btn btn-dark">PAYTM</button></a></div>
+                    <div class="col-sm-4 align"><a href="directpay"><button class="btn btn-dark">DIRECT PAY</button></a></div>
+                    <div class="col-sm-4 align"><a href="razorpaygate"><button class="btn btn-dark">RAZORPAY</button></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

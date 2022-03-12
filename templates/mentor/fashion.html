@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <h2 class="align mentorheading-color">&#9829;OUR MENTORS&#9829;</h2>
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="{% static 'srima.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Srimaa</h3>
+                <h3 class="textsize">Architect</h3>
+                <a href="srimaa"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'Damini.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Damini</h3>
+                <h3 class="textsize">Dance, fashion & Lifestyle expert</h3>
+                <a href="damini"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'anukta.jpg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Anukta</h3>
+                <h3 class="textsize">Actor, Dancer & Content Creator</h3>
+                <a href="anukta"><h4>Read more</h4></a>
+            </div>
+            <div class="col-sm-3">
+                <img src="{% static 'jayshreeg.jpeg'%}" class="best-img"><br><br>
+                <h3 class="textsize">Jayshree</h3>
+                <h3 class="textsize">Fashion designer</h3>
+                <a href="jayshree"><h4>Read more</h4></a>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

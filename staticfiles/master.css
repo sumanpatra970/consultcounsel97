@@ -73,7 +73,10 @@ a:visited {
       font-size: 14px;
       border: none;
    }
-
+   .section-img{
+      width:100%;
+      height:auto;
+   }
 }
 .align{
    text-align: center;

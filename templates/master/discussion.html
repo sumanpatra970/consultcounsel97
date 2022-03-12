@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <p class="textsize">
+                    Post your queries from any topic which you want to be clarified by us, so that it can be replied by our mentors who are proficient in that particular area...
+                    You can also give suitable reply to the question by clicking on it by becoming a volunteer...
+                    Everything in this section is Free...
+                </p>
+                <h4 class="textsize">ASK YOUR QUESTION,WE WOULD LOVE TO HELP YOU</h4>
+                <form action="redirect" method="POST" class="form-group">
+                    {%csrf_token%}
+                    {%for i in form%}
+                    <div class="space">{{i}}</div>
+                    {%endfor%}
+                    <h4 class="textsize space">Enter your email in the box to get your answer in mail</h4>
+                    <button type="submit" class="btn btn-success align space-button">SUBMIT</button>
+                </form>
+                <div class="textsize space">ALL QUESTIONS</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                {%for i in v%}
+                <a href="/reply/{{i.pk}}/"><div class="textsize space">{{i.question}}</div></a>
+                {% endfor %}
+            </div><br>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

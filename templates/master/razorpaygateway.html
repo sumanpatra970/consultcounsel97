@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form action="paynext" method="POST" class="form-group">{% csrf_token %}
+                    {% csrf_token %}
+                    <h3 class="align form-heading">Creating order</h3>
+                    <label class="space"><div class="textsize">Name</div></label>
+                    <input type="text" name="name" required class="form-control space" value={{name}}>
+                    <label class="space"><div class="textsize">Mobile no</div></label>
+                    <input type="text" name="phone" required class="form-control space">
+                    <label class="space"><div class="textsize">Email</div></label>
+                    <input type="email" name="email" required class="form-control space">
+                    <label class="space"><div class="textsize">Amount:</div></label>
+                    <input type="text" name="amount" required class="form-control space">
+                    <button type="submit" class="btn btn-dark space-button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

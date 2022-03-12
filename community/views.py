@@ -1,37 +1,37 @@
 from django.shortcuts import render
 
 def mentor(request):
-    return render(request,'option.html')
+    return render(request,'mentor/option.html')
 
 def art(request):
-    return render(request,'art.html')
+    return render(request,'mentor/art.html')
 
 def dancer(request):
-    return render(request,'dancer.html')
+    return render(request,'mentor/dancer.html')
 
 def music(request):
-    return render(request,'music.html')
+    return render(request,'mentor/music.html')
 
 def professional(request):
-    return render(request,'professional.html')
+    return render(request,'mentor/professional.html')
 
 def others(request):
-    return render(request,'others.html')
+    return render(request,'mentor/others.html')
 
 def blogger(request):
-    return render(request,'blogger.html')
+    return render(request,'mentor/blogger.html')
 
 def fashion(request):
-    return render(request,'fashion.html')
+    return render(request,'mentor/fashion.html')
 
 def education(request):
-    return render(request,'education.html')
+    return render(request,'mentor/education.html')
 
 def fitness(request):
-    return render(request,'fitness.html')
+    return render(request,'mentor/fitness.html')
 
 def sports(request):
-    return render(request,'sports.html')
+    return render(request,'mentor/sports.html')
 
 def shree(request):
     return render(request,'mentor/shree.html')

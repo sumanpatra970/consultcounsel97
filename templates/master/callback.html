@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static %}
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h4 class="align"> Payment Status: {{ STATUS }} </h4>
+                <h5 class="align">Order_id : {{ ORDERID }}<h5>
+                <h5 class="align">Transcation id: {{ TXNID }} </h5>
+                <h5 class="align"> STATUS: {{ STATUS }} </h5>
+                <a href='/'><h5 class="align">CLICK HERE TO GO HOMEPAGE</h5></a>
+                <h5 class="align">If your payment is successful, We will call you</h5><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

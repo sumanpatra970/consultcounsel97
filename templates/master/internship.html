@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static %}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form method="POST" action="summer" class="form-group" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h4 class="align form-heading">Form</h4>
+                    {% for field in fm %}
+                    <label class="textsize space">{{ field.label }}</label>
+                    {{ field }}
+                    {% endfor %}
+                    <label class="container"><div class="textsize">Internship</div>
+                        <input type="checkbox" name="check1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container space"><div class="textsize">Training</div>
+                        <input type="checkbox" name="check2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <button type="submit" name="submit" value="Submit" class="btn btn-dark space-button">SUBMIT</button><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    {%endblock content%}
+</body>
+</html>

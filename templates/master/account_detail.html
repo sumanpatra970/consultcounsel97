@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h3 class="align form-heading">Profile details</h3>
+                <form  method="POST" class="form-group">
+                    {%csrf_token%}
+                    {%for t in data%}
+                    <h5>{{t.label_tag}} {{t}}</h5>
+                    {% endfor %}
+                </form>
+                <a href="editprofile"><button class="btn btn-dark">EDIT PROFILE</button></a>
+                <a href="password"><button class="btn btn-success">CHANGE PASSWORD</button></a>
+                <a href="logout"><button class="btn btn-warning">LOGOUT</button></a>
+                <a href="step3"><button class="btn btn-danger">BOOK SESSION</button></a>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

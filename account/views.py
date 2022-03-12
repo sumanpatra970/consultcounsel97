@@ -10,13 +10,13 @@ def signup(request):
         if fm.is_valid():
             email=fm.cleaned_data['email']
             fm.save()
-            return render(request,'account.html')
+            return render(request,'master/account.html')
         else:
             fm=account_creation_form()
-            return render(request,'ok.html',{'fm':fm})
+            return render(request,'master/ok.html',{'fm':fm})
     else:
         fm=account_creation_form()
-        return render(request,'signup.html',{'fm':fm})
+        return render(request,'master/signup.html',{'fm':fm})
 
 def login(request):
     if request.method=='POST':
@@ -30,18 +30,18 @@ def login(request):
                 return HttpResponseRedirect('account')
             else:
                 user_fm=login_form()
-                return render(request,'ok.html',{'fm':user_fm})
+                return render(request,'master/ok.html',{'fm':user_fm})
         else:
                 user_fm=login_form()
-                return render(request,'ok.html',{'fm':user_fm})
+                return render(request,'master/ok.html',{'fm':user_fm})
     else:
         user_fm=login_form()
-        return render(request,'login.html',{'fm':user_fm})
+        return render(request,'master/login.html',{'fm':user_fm})
 
 def account(request):
     if request.user.is_authenticated:
         user_acc=user_change_form(instance=request.user)
-        return render(request,'account_detail.html',{'data':user_acc})
+        return render(request,'master/account_detail.html',{'data':user_acc})
     else:
         return HttpResponseRedirect('login')
 
@@ -53,10 +53,10 @@ def password(request):
             return HttpResponseRedirect('login')
         else:
             fm=password_form(request.user)
-            return render(request,'password.html',{'fm':fm})
+            return render(request,'master/password.html',{'fm':fm})
     else:
         fm=password_form(request.user)
-        return render(request,'password.html',{'fm':fm})
+        return render(request,'master/password.html',{'fm':fm})
 
 def editaccount(request):
     if request.user.is_authenticated:
@@ -67,10 +67,10 @@ def editaccount(request):
                 return HttpResponseRedirect('login')
             else:
                 user_acc=user_change_form(instance=request.user)
-                return render(request,'editprofile.html',{'data':user_acc})
+                return render(request,'master/editprofile.html',{'data':user_acc})
         else:
             user_acc=user_change_form(instance=request.user)
-            return render(request,'editprofile.html',{'data':user_acc})
+            return render(request,'master/editprofile.html',{'data':user_acc})
     else:
         return HttpResponseRedirect('login')
 
@@ -87,9 +87,9 @@ def passwordchange(request):
             if v:
                 return HttpResponseRedirect('password')
             else:
-                return render(request,'ok.html')
+                return render(request,'master/ok.html')
         else:
-            return render(request,'ok.html')
+            return render(request,'master/ok.html')
     else:
         fm=name_form()
-        return render(request,'resetpassword.html',{'fm':fm})
+        return render(request,'master/resetpassword.html',{'fm':fm})

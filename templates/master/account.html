@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-md-4">
+                <img src="{% static 'pic.jpg'%}" class="best-img">
+                <h3 class="align textsize">Welcome to our family.</h3>
+                <h3 class="align textsize">We are ready to give you the best service.</h3>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

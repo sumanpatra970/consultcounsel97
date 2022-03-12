@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{% load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h4 class="align">SCAN THIS QR TO PAY DIRECTLY</h4>
+                <h4 class="align">Accroding to your plan:Amount-{{amount}}</h4>
+                <h4 class="align">UPIID-9337569167@ybl</h4>
+                <img src="{% static 'paytm.jpg'%}" class="paytmqr"><br>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

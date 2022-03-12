@@ -13,21 +13,21 @@ import razorpay
 from django.views import View
 
 def home(request):
-    return render(request,'home.html')
+    return render(request,'master/home.html')
 
 def donation(request):
-    return render(request,'donation.html')
+    return render(request,'master/donation.html')
 
 def razorpaygateway(request):
     if request.method=="GET":
-        return render(request,'razorpaygateway.html')
+        return render(request,'master/razorpaygateway.html')
     else:
         username = request.POST['username']
         email = request.POST['email']
         amount = int(request.POST['amount'])
         donation = Donation.objects.create(Name=username, Amount=amount,Email=email)
         donation.save()
-        return render(request,'razorpaygateway.html',{})
+        return render(request,'master/razorpaygateway.html',{})
 
 def paynext(request):
     context = {}
@@ -55,11 +55,11 @@ def paynext(request):
             context['order_id'] = order_id
             transaction = Transaction.objects.create(made_by=name, amount=order_amount,order_id=order_id)
             transaction.save()
-            return render(request, 'confirm_order.html', context)
+            return render(request, 'master/confirm_order.html', context)
     return HttpResponse('<h1>Error in  create order function</h1>')
 
 def paynow(request):
-    return render(request,'paynow.html')
+    return render(request,'master/paynow.html')
 
 def directpaygateway(request):
     if request.method == "GET":
@@ -74,22 +74,22 @@ def directpaygateway(request):
         order_id=username+str(amount)+"dpscan_rt_spl"
         transaction = Transaction.objects.create(made_by=username, amount=amount,order_id=order_id)
         transaction.save()
-        return render(request,'scan.html',{'amount':amount})
+        return render(request,'master/scan.html',{'amount':amount})
 
 def finalscan(request):
-    return render(request,'scan.html')
+    return render(request,'master/scan.html')
 
 def about(request):
-    return render(request,'about.html')
+    return render(request,'master/about.html')
 
 def suman(request):
-    return render(request,'suman.html')
+    return render(request,'master/suman.html')
 
 def bhanu(request):
-    return render(request,'bhanu.html')
+    return render(request,'master/bhanu.html')
 
 def testimony(request):
-    return render(request,'testimony.html')
+    return render(request,'master/testimony.html')
 
 def feedback(request):
     if request.method=="POST":
@@ -97,38 +97,38 @@ def feedback(request):
         if fm.is_valid():
             x=fm.cleaned_data['Email']
             fm.save()
-            return render(request,'thank.html')
+            return render(request,'master/thank.html')
         else:
             fm=feedbackform()
-            return render(request,'feedback.html',{'fm':fm})
+            return render(request,'master/feedback.html',{'fm':fm})
     else:
         fm=feedbackform()
-        return render(request,'feedback.html',{'fm':fm})
+        return render(request,'master/feedback.html',{'fm':fm})
 
 def support(request):
-    return render(request,'support.html')
+    return render(request,'master/support.html')
 
 def privacy(request):
-    return render(request,'privacy.html')
+    return render(request,'master/privacy.html')
 
 def policy(request):
-    return render(request,'policy.html')
+    return render(request,'master/policy.html')
 
 def career(request):
-    return render(request,'career.html')
+    return render(request,'master/career.html')
 
 def job(request):
     fm=digitalform()
-    return render(request,'job.html',{'fm':fm})
+    return render(request,'master/job.html',{'fm':fm})
 
 def careerform(request):
     if request.method=="POST":
-        return render(request,'jobformsubmit.html')
+        return render(request,'master/jobformsubmit.html')
     else:
-        return render(request,'ok.html')
+        return render(request,'master/ok.html')
 
 def joberror(request):
-    return render(request,'joberror.html')
+    return render(request,'master/joberror.html')
 
 def pdf_view(request):
     try:
@@ -137,7 +137,7 @@ def pdf_view(request):
         return HttpResponse('file not found')
 
 def mentordetails(request):
-    return render(request,'mentordetails.html')
+    return render(request,'master/mentordetails.html')
 
 def freesession(request):
     if request.method == 'POST':
@@ -148,9 +148,9 @@ def freesession(request):
         doubt = request.POST.get('doubt')
         x=Freesession.objects.create(name=name,mobile=phone,email=email,field=field,doubt=doubt)
         x.save()
-        return render(request,'thank.html')
+        return render(request,'master/thank.html')
     else:
-        return render(request,'freesession.html')
+        return render(request,'master/freesession.html')
 
 def summer(request):
     form = internform(request.POST or None,request.FILES or None)
@@ -174,12 +174,12 @@ def summer(request):
                 c2=False
             print(c1,c2)
             x=Internship.objects.create(name=name,email=email,mobile=mobile,field=degree,cv=cv,checkbox1=c1,checkbox2=c2)
-            return render(request,'thank.html')
+            return render(request,'master/thank.html')
         else:
             print(form)
-            return render(request,'ok.html')
+            return render(request,'master/ok.html')
     else:
-        return render(request,'internship.html',{'fm':form})
+        return render(request,'master/internship.html',{'fm':form})
 
 class AdsView(View):
     def get(self, request, *args, **kwargs):

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'master/base.html'%}
+{%load static%}
+<html lang="en">
+<head>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <p class="textsize">We have experienced mentors those are working in industries.
+                    So if you want to hire any mentor, Please fill-up the form below.
+                </p>
+                <form class="form-group" action="hiring-mentor-done" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h4 class="align form-heading">Form</h4>
+                    <label for="fname" class="space"><div class="textsize">Name:</div></label>
+                    <input type="text" id="fname" name="fname" class="form-control space">
+                    <label for="lname" class="space"><div class="textsize">Email:</div></label>
+                    <input type="email" id="lname" name="lname" class="form-control space">
+                    <label for="phone" class="space"><div class="textsize">Phone number:</div></label>
+                    <input type="tel" id="phone" name="phone" class="form-control space">
+                    <label for="area" class="space"><div class="textsize">Area of Expertise:</div></label>
+                    <input type="text" id="area" name="area" class="form-control space">
+                    <button type="submit" class="btn btn-success space-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>
