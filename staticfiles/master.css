@@ -8,7 +8,6 @@ video {
 button{
    font-size:18px;
 }
-
 .dropbtn {
    height: 40px;
    width: 90px;
@@ -45,7 +44,7 @@ button{
    display: block;
 }
 .dropdown:hover .dropbtn {
-   background-color:#5159c9;
+   background-color:#1523e6;
 }
 a:link{
    color:#800000;
