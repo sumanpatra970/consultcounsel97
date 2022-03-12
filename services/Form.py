@@ -1,17 +1,17 @@
-from .models import Forum_table,Mentor
+from .models import Forum,Mentor
 
 from django import forms
 
 class question_form(forms.ModelForm):
     class Meta:
-        model=Forum_table
+        model=Forum
         fields=['question','email']
         widgets={'question':forms.Textarea(attrs={'rows':3,'cols':40,'class':'form-control'}),
             'email':forms.EmailInput(attrs={'rows':3,'cols':40,'class':'form-control'})}
 
 class answer_form(forms.ModelForm):
     class Meta:
-        model=Forum_table
+        model=Forum
         fields=['answer']
         widgets={'answer':forms.Textarea(attrs={'rows':3,'cols':40,'class':'form-control'})}
 

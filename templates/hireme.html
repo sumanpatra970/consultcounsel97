@@ -13,7 +13,7 @@
                 <p class="textsize">We have experienced mentors those are working in industries.
                     So if you want to hire any mentor, Please fill-up the form below.
                 </p>
-                <form class="form-group" action="hiring-mentor-done" method="POST">
+                <form class="form-group" action="hiring-mentor-done" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <h4 class="align form-heading">Form</h4>
                     <label for="fname" class="space"><div class="textsize">Name:</div></label>

@@ -14,7 +14,7 @@ class Feedback(models.Model):
     Query = models.CharField(max_length=500,default="")
     made_on = models.DateTimeField(auto_now_add=True)
 
-class free_sessionform(models.Model):
+class Freesession(models.Model):
     email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
     mobile = models.CharField(max_length=30,default="",null=True)
@@ -22,7 +22,7 @@ class free_sessionform(models.Model):
     field = models.CharField(max_length=30,default="",null=True)
     doubt = models.CharField(max_length=300,default="",null=True)
 
-class internship(models.Model):
+class Internship(models.Model):
     email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
     mobile = models.CharField(max_length=30,default="",null=True)

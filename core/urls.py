@@ -25,6 +25,6 @@ urlpatterns = [
     path('iimcalcutta-project',views.pdf_view),
     path('mentordetails',views.mentordetails),
     path('freesession',views.freesession),
-    path('internship',views.internship),
+    path('summer',views.summer),
     path('ads.txt', AdsView.as_view()),
 ]

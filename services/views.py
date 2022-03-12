@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .models import Forum_table,Primemember,Transaction,transcatid,course_info,Court,solution,hiring_mentor
+from .models import Forum,Primemember,Transaction,Transcatid,Course,Court,Solution,Hirementor
 from career import settings
 from django.contrib import auth
 from django.views.decorators.csrf import csrf_exempt
@@ -9,7 +9,7 @@ from .Form import question_form,answer_form,volunter_form
 import razorpay
 
 def discussion(request):
-    obj=Forum_table.objects.all()
+    obj=Forum.objects.all()
     fm=question_form()
     return render(request,'discussion.html',{'v':obj,'form':fm})
 
@@ -19,14 +19,14 @@ def reply(request,id):
         if new.is_valid():
             st=new.cleaned_data['answer']
             y=answer_form()
-            v=Forum_table.objects.get(pk=id)
+            v=Forum.objects.get(pk=id)
             v.answer=st
             v.save()
             t=v.question
             o=v.answer
             return render(request,'forum.html',{'o':o,'t':t,'fm':y,'g':id})
     else:
-        v=Forum_table.objects.get(pk=id)
+        v=Forum.objects.get(pk=id)
         t=v.question
         o=v.answer
         y=answer_form()
@@ -208,7 +208,7 @@ def payment_status(request):
     }
     x=response['razorpay_payment_id']
     y=response['razorpay_order_id']
-    v=transcatid.objects.create(order_id=y,transcation_id=x)
+    v=Transcatid.objects.create(order_id=y,transcation_id=x)
     v.save()
     try:
         status = client.utility.verify_payment_signature(params_dict)
@@ -257,7 +257,7 @@ def paydirect(request):
         phone = request.POST.get('mobile')
         email = request.POST.get('email')
         refered=request.POST.get('emaill')
-        x=course_info.objects.create(name=fname+lname,email=email,mobile=phone,Refered=refered)
+        x=Course.objects.create(name=fname+lname,email=email,mobile=phone,Refered=refered)
         x.save()
         return render(request,'scan.html')
 
@@ -288,7 +288,7 @@ def itsolutionrequest(request):
         name = request.POST.get('username')
         phone = request.POST.get('mobileno')
         email = request.POST.get('email')
-        x=solution.objects.create(name=name,mobile=phone,email=email)
+        x=Solution.objects.create(name=name,mobile=phone,email=email)
         x.save()
         return render(request,'thank.html')
     else:
@@ -303,7 +303,7 @@ def hiringform(request):
         email = request.POST.get('lname')
         phone = request.POST.get('phone')
         area = request.POST.get('area')
-        x=hiring_mentor.objects.create(name=fname,email=email,area=area,mobile=phone)
+        x=Hirementor.objects.create(name=fname,email=email,area=area,mobile=phone)
         x.save()
         return render(request,'hiringform.html')
     else:

@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Forum_table(models.Model):
+class Forum(models.Model):
     question = models.CharField(max_length=100,default="")
     email = models.CharField(max_length=100,default="")
     answer = models.TextField(max_length=2000,blank=True)
@@ -37,19 +37,19 @@ class Primemember(models.Model):
     Query = models.CharField(max_length=100,blank=False,default="")
     made_on = models.DateTimeField(auto_now_add=True)
 
-class transcatid(models.Model):
+class Transcatid(models.Model):
     made_on = models.DateTimeField(auto_now_add=True)
     order_id = models.CharField(unique=True, max_length=100, null=True, blank=True)
     transcation_id = models.CharField(unique=True, max_length=100, null=True, blank=True)
 
-class course_info(models.Model):
+class Course(models.Model):
     name = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
     email = models.CharField(max_length=30,default="",null=False)
     mobile = models.CharField(max_length=30,default="",null=False)
     Refered = models.CharField(max_length=20,default="NA",null=True)
 
-class hiring_mentor(models.Model):
+class Hirementor(models.Model):
     name = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
     email = models.CharField(max_length=30,default="",null=True)
@@ -63,7 +63,7 @@ class Court(models.Model):
     name = models.CharField(max_length=300,default="",null=True)
     location = models.CharField(max_length=300,default="",null=True)
 
-class solution(models.Model):
+class Solution(models.Model):
     email = models.CharField(max_length=30,default="",null=True)
     made_on = models.DateTimeField(auto_now_add=True)
     mobile = models.CharField(max_length=30,default="",null=True)

@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.conf import settings
-from .form import feedbackform,digitalform
+from .form import feedbackform,digitalform,internform
 from .models import Donation
 from services.models import Transaction
-from .models import free_sessionform,internship
+from .models import Freesession,Internship
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect,HttpResponse,FileResponse
 from django.contrib import auth
@@ -146,24 +146,29 @@ def freesession(request):
         email = request.POST.get('email')
         field = request.POST.get('field')
         doubt = request.POST.get('doubt')
-        x=free_sessionform.objects.create(name=name,mobile=phone,email=email,field=field,doubt=doubt)
+        x=Freesession.objects.create(name=name,mobile=phone,email=email,field=field,doubt=doubt)
         x.save()
         return render(request,'thank.html')
     else:
         return render(request,'freesession.html')
 
-def internship(request):
-    if request.method == 'POST':
-        name = request.POST.get('username')
-        phone = request.POST.get('mobileno')
-        email = request.POST.get('email')
-        field = request.POST.get('cars')
-        cv = request.POST.get('filename')
-        x=internship.objects.create(name=name,mobile=phone,email=email,field=field,cv=cv)
-        x.save()
-        return render(request,'thank.html')
+def summer(request):
+    form = internform(request.POST or None,request.FILES or None)
+    if request.POST:
+        if form.is_valid():
+            name = form.cleaned_data.get("Name")
+            mobile = form.cleaned_data.get("Mobile")
+            email = form.cleaned_data.get("Email")
+            degree = form.cleaned_data.get("Degree")
+            cv= request.FILES['resume']
+            print(name,mobile,email,degree,cv)
+            x=Internship.objects.create(name=name)
+            return render(request,'thank.html')
+        else:
+            print(form)
+            return render(request,'ok.html')
     else:
-        return render(request,'internship.html')
+        return render(request,'internship.html',{'fm':form})
 
 class AdsView(View):
     def get(self, request, *args, **kwargs):
