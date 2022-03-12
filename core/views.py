@@ -162,7 +162,7 @@ def summer(request):
             degree = form.cleaned_data.get("Degree")
             cv= request.FILES['resume']
             print(name,mobile,email,degree,cv)
-            x=Internship.objects.create(name=name)
+            x=Internship.objects.create(name=name,email=email,mobile=mobile,field=degree,cv=cv)
             return render(request,'thank.html')
         else:
             print(form)
