@@ -142,6 +142,13 @@ button{
    .btn .btn-primary{
       font-size: 10px;
    }
+   .dropbtn {
+      height: 40px;
+      width: 90px;
+      padding: 10px;
+      font-size: 12px;
+      border: none;
+   }
 
 }
 a:link{
