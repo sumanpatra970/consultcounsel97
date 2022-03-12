@@ -61,9 +61,19 @@ a:visited {
       margin-top:5px;
       margin-bottom:5px;
    }
-   button{
-      text-transform: capitalize;
+   .btn .btn-primary{
+      font-size: 10px;
    }
+   .dropbtn {
+      height: 40px;
+      width: 90px;
+      padding: 10px;
+      margin-top:5px;
+      margin-bottom:5px;
+      font-size: 14px;
+      border: none;
+   }
+
 }
 .align{
    text-align: center;
