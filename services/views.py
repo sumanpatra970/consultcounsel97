@@ -154,6 +154,7 @@ def qrdirect(request):
         order_id=username+str(plan)+"dpscan_rt_spl"
         transaction = Transaction.objects.create(made_by=username, amount=Amount,order_id=order_id)
         transaction.save()
+        return render(request,'scan.html',{'amount':Amount})
     
 def razorpaygate(request):
     return render(request, 'razorpay.html', {})
