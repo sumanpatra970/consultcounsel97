@@ -129,10 +129,14 @@ button{
    position: relative;
    margin: auto;
 }
-.logo{
-   width:100%;
-   height:500px;
+
 }
+@media only screen and (max-width: 600px) {
+   
+   .logo{
+      width:100%;
+      height:500px;
+   }
 }
 a:link{
    color:#800000;
