@@ -213,6 +213,14 @@ a:visited {
    cursor: pointer;
    position: fixed;
 }
+.notification{
+   color:#800000;
+   text-shadow: #999999;
+   font-size: x-large;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   text-align: center;
+}
 .loginPopup {
    position: relative;
    text-align: center;
