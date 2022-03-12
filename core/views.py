@@ -164,14 +164,14 @@ def summer(request):
             checkbox1=request.POST.get('check1')
             checkbox2=request.POST.get('check2')
             if checkbox1=="on":
-                check1=True
+                check1=1
             else:
-                check1=False
+                check1=0
 
             if checkbox2=="on":
-                check1=True
+                check1=1
             else:
-                check2=False
+                check2=0
             print(name,mobile,email,degree,cv,checkbox1,checkbox2,check1,check2)
             x=Internship.objects.create(name=name,email=email,mobile=mobile,field=degree,cv=cv,checkbox1=check1,checkbox2=check2)
             return render(request,'thank.html')
