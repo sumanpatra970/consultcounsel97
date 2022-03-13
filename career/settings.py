@@ -99,7 +99,6 @@ staticfile=os.path.join(BASE_DIR,'staticfiles')
 
 STATICFILES_DIRS=[staticfile]
 
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
@@ -124,9 +123,13 @@ EMAIL_HOST_USER = 'sumanpatra260@gmail.com'
 
 EMAIL_HOST_PASSWORD = 'jukyfzmfmkpcxbhb'
 
-DEFAULT_FROM_EMAIL = 'sumanpatra260@gmail.com'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-DEFAULT_TO_EMAIL = 'sumanpatra68@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+import socket
+
+socket.getaddrinfo('127.0.0.1',8000)
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 

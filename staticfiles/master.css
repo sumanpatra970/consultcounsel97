@@ -8,6 +8,12 @@ video {
 button{
    font-size:18px;
 }
+.error-go{
+   color:red;
+   font-size:16px;
+   margin:10px 10px 10px 10px;
+   text-decoration: none;
+}
 .dropbtn {
    height: 40px;
    width: 90px;
@@ -80,7 +86,6 @@ a:visited {
    .notification{
       font-size: large;
    }
-
 }
 .align{
    text-align: center;
@@ -119,7 +124,7 @@ a:visited {
 .notification{
    color:#800000;
    text-shadow: #999999;
-   font-size: x-large;
+   font-size: large;
    margin-top: 5px;
    margin-bottom: 5px;
    text-align: center;
@@ -186,51 +191,44 @@ a:visited {
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
- }
- 
+} 
  /* Hide the browser's default checkbox */
- .container input {
+.container input {
    position: absolute;
    opacity: 0;
    cursor: pointer;
    height: 0;
    width: 0;
- }
- 
+} 
  /* Create a custom checkbox */
- .checkmark {
+.checkmark {
    position: absolute;
    top: 0;
    left: 0;
    height: 25px;
    width: 25px;
    background-color: rgb(147, 236, 144);
- }
- 
+} 
  /* On mouse-over, add a grey background color */
- .container:hover input ~ .checkmark {
+.container:hover input ~ .checkmark {
    background-color: #ccc;
- }
- 
+} 
  /* When the checkbox is checked, add a blue background */
- .container input:checked ~ .checkmark {
+.container input:checked ~ .checkmark {
    background-color: #2196F3;
- }
- 
+} 
  /* Create the checkmark/indicator (hidden when not checked) */
- .checkmark:after {
+.checkmark:after {
    content: "";
    position: absolute;
    display: none;
- }
- 
+}
  /* Show the checkmark when checked */
- .container input:checked ~ .checkmark:after {
+.container input:checked ~ .checkmark:after {
    display: block;
- }
- 
+}
  /* Style the checkmark/indicator */
- .container .checkmark:after {
+.container .checkmark:after {
    left: 9px;
    top: 5px;
    width: 5px;
@@ -240,4 +238,4 @@ a:visited {
    -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
    transform: rotate(45deg);
- }
+}

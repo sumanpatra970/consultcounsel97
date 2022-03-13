@@ -1,53 +1,47 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="author" content="suman">
     <meta name="keywords" content="consult counsel guidance teaching help mentor tution teacher expert dancer music teacher professional doctor writter painter  healthworker counselling best in india consulting session video lecture video session startup best">
-    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <meta name="description" content="Consult & Counsel is an online consulting service where people seeking guidance in any field is counselled by a Mentor who is expertised in the same area">    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="icon" href="{% static 'COUNC.jpeg' %}">
     <link rel="stylesheet" href="{% static 'next.css' %}">
     <title>Order confirmation</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="main-block box">
         <form action="{% url 'payment_status' %}" method="POST">
-            {% csrf_token %}
-            <h1>Creating order</h1>
-            <fieldset>
-                <legend><h3>Selected Product</h3></legend>
-                <div class="gender">
-                    <div><span style='font-size:25px;'>&#8618;</span>Product {{ product_id }} Price {{ price }}</div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend><h3>Personal Details</h3></legend>
-                <div class="personal-details">
-                    <div>
-                        <div><label>Name:</label><input type="text" name="name" placeholder="{{ name }}" disabled></div>
-                        <div><label>Phone:</label><input type="text" name="name" placeholder="{{ phone }}" disabled></div>
-                        <div><label>Email:</label><input type="text" name="name" placeholder="{{ email }}" disabled></div>
-                    </div>
-                </div>
-            </fieldset>
-            <script src="https://checkout.razorpay.com/v1/checkout.js"
-                    data-key="rzp_live_T029oczISLBkmx"
-                    data-amount="{{ price }}"
-                    data-currency="INR"
-                    data-order_id="{{ order_id }}"
-                    data-buttontext="Pay with Razorpay"
-                    data-name="Consult and Counsel"
-                    data-description="Transaction"
-                    data-image="www.consultandcounsel.com/static/COUNC.jpg"
-                    data-prefill.name="{{ name }}"
-                    data-prefill.email="{{ email }}"
-                    data-prefill.contact="{{ phone }}"
-                    data-theme.color="#def052">
-            </script>
-            <input type="hidden" custom="Hidden Element" name="hidden">
-      </form>
+          {% csrf_token %}
+          <h1>Creating order</h1>
+          <fieldset>
+            <legend><h3>Selected Product</h3></legend>
+            <div class="gender"><div><span style='font-size:25px;'>&#8618;</span>Product {{ product_id }} Price {{ price }}</div></div>
+          </fieldset>
+          <fieldset>
+            <legend><h3>Personal Details</h3></legend>
+            <div class="personal-details">
+              <div><label>Name:</label><input type="text" name="name" placeholder="{{ name }}" disabled></div>
+              <div><label>Phone:</label><input type="text" name="name" placeholder="{{ phone }}" disabled></div>
+              <div><label>Email:</label><input type="text" name="name" placeholder="{{ email }}" disabled></div>
+            </div>
+          </fieldset>
+          <script src="https://checkout.razorpay.com/v1/checkout.js"
+              data-key="rzp_live_T029oczISLBkmx"
+              data-amount="{{ price }}"
+              data-currency="INR"
+              data-order_id="{{ order_id }}"
+              data-buttontext="Pay with Razorpay"
+              data-name="Consult and Counsel"
+              data-description="Transaction"
+              data-image="www.consultandcounsel.com/static/COUNC.jpeg"
+              data-prefill.name="{{ name }}"
+              data-prefill.email="{{ email }}"
+              data-prefill.contact="{{ phone }}"
+              data-theme.color="#def052">
+          </script>
+          <input type="hidden" custom="Hidden Element" name="hidden">
+        </form>
     </div>
-  </body>
+</body>
 </html>

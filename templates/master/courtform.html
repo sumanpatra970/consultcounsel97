@@ -2,15 +2,12 @@
 {% extends 'master/base.html'%}
 {%load static%}
 <html lang="en">
-<head>
-</head>
+<head></head>
 <body>
     {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <img src="{% static 'court6.jpeg'%}" class="best-img">
-            </div>
+            <div class="col-md-3"><img src="{% static 'court6.jpeg'%}" class="best-img"></div>
             <div class="col-md-6">
                  <form action="court-request-done" method="POST" class="form-group" enctype="multipart/form-data">
                     <label for="fname" class="space"><div class="textsize">Name</div></label>
@@ -24,9 +21,7 @@
                     <button type="submit" class="btn btn-dark space-button">SUBMIT</button>
                 </form>
             </div>
-            <div class="col-md-3">
-                <img src="{% static 'court7.jpeg'%}" class="best-img">
-            </div>
+            <div class="col-md-3"><img src="{% static 'court7.jpeg'%}" class="best-img"></div>
         </div>
     </div>
     {% endblock content %}

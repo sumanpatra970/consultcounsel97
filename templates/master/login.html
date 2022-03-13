@@ -2,8 +2,7 @@
 {% extends 'master/base.html'%}
 {% load static %}
 <html lang="en">
-<head>
-</head>
+<head></head>
 <body>
     {% block content %}
     <div class="container-fluid">
@@ -11,6 +10,13 @@
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
                 <h3 class="align">Sign-in your account here</h4>
+                    {% if messages %}
+                    <ul class="messages cf lk">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
                 <form class="form-group" action="login" method="POST">
                     {% csrf_token %}
                     {%for field in fm%}
@@ -20,7 +26,7 @@
                     <button type="submit" class="btn btn-success space-button">SUBMIT</button>
                 </form>
                 <div class="textsize">New to site?</div><a href="signup"><div class="textsize">Creat your account</div></a>
-                <div class="textsize"><a href="passwordchange">forgot password</a></div>
+                <div class="textsize"><a href="password_reset">forgot password</a></div>
             </div>
         </div>
     </div>

@@ -2,8 +2,7 @@
 {% extends 'master/base.html'%}
 {% load static%}
 <html lang="en">
-<head>
-</head>
+<head></head>
 <body>
     {% block content %}
     <div class="container-fluid">
@@ -11,7 +10,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <h3 class="textsize">Q .{{t}}</h3>
-                <h3 class="textsize">Answer by expert:<h3>
+                <h3 class="textsize">Answer by expert:</h3>
                 <h3 class="textsize">{{o}}</h3>
                 {%if request.user.is_superuser%}
                 <h3 class="textsize">Admin,you can write your answer</h3>
@@ -19,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid lll">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
