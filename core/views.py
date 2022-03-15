@@ -19,13 +19,13 @@ def donation(request):
     return render(request,'master/donation.html')
 
 def razorpaygateway(request):
-    if request.method=="GET":
+    if request.method == "GET":
         return render(request,'master/razorpaygateway.html')
     else:
         username = request.POST['username']
         email = request.POST['email']
         amount = int(request.POST['amount'])
-        donation = Donation.objects.create(Name=username, Amount=amount,Email=email)
+        donation = Donation.objects.create(Name = username, Amount=amount, Email=email)
         donation.save()
         return render(request,'master/razorpaygateway.html',{})
 
@@ -36,7 +36,7 @@ def paynext(request):
         phone = request.POST.get('phone')
         email = request.POST.get('email')
         amount = int(request.POST.get('amount'))
-        x=Donation.objects.create(Name=name,Mobileno=phone,Email=email,Amount=amount)
+        x=Donation.objects.create(Name = name, Mobileno = phone, Email = email, Amount = amount)
         x.save()
         amount=amount*100
         order_amount = amount
@@ -44,7 +44,7 @@ def paynext(request):
         order_receipt = 'order_rcptid_11'
         notes = {'Shipping address': 'Bommanahalli, Bangalore'}
         client = razorpay.Client(auth=("rzp_live_T029oczISLBkmx", "hnEDgqWj3jOiHqOZfcksiVRG"))
-        response = client.order.create(dict(amount=order_amount, currency=order_currency, receipt=order_receipt, notes=notes, payment_capture='0'))
+        response = client.order.create(dict(amount = order_amount, currency = order_currency, receipt = order_receipt, notes = notes, payment_capture = '0'))
         order_id = response['id']
         order_status = response['status']
         if order_status=='created':
@@ -53,7 +53,7 @@ def paynext(request):
             context['phone'] = phone
             context['email'] = email
             context['order_id'] = order_id
-            transaction = Transaction.objects.create(made_by=name, amount=order_amount,order_id=order_id)
+            transaction = Transaction.objects.create(made_by = name, amount = order_amount, order_id = order_id)
             transaction.save()
             return render(request, 'master/confirm_order.html', context)
     return HttpResponse('<h1>Error in  create order function</h1>')
@@ -69,10 +69,10 @@ def directpaygateway(request):
         mobileno = request.POST['phone']
         email = request.POST['email']
         amount = int(request.POST['amount'])
-        x=Donation.objects.create(Name=username,Mobileno=mobileno,Email=email,Amount=amount)
+        x=Donation.objects.create(Name = username, Mobileno = mobileno, Email = email, Amount = amount)
         x.save()
         order_id=username+str(amount)+"dpscan_rt_spl"
-        transaction = Transaction.objects.create(made_by=username, amount=amount,order_id=order_id)
+        transaction = Transaction.objects.create(made_by = username, amount = amount, order_id = order_id)
         transaction.save()
         return render(request,'master/scan.html',{'amount':amount})
 
@@ -92,17 +92,17 @@ def testimony(request):
     return render(request,'master/testimony.html')
 
 def feedback(request):
-    if request.method=="POST":
-        fm=feedbackform(request.POST,request.FILES)
+    if request.method == "POST":
+        fm = feedbackform(request.POST,request.FILES)
         if fm.is_valid():
-            x=fm.cleaned_data['Email']
+            x = fm.cleaned_data['Email']
             fm.save()
             return render(request,'master/thank.html')
         else:
-            fm=feedbackform()
+            fm = feedbackform()
             return render(request,'master/feedback.html',{'fm':fm})
     else:
-        fm=feedbackform()
+        fm = feedbackform()
         return render(request,'master/feedback.html',{'fm':fm})
 
 def support(request):
@@ -118,11 +118,11 @@ def career(request):
     return render(request,'master/career.html')
 
 def job(request):
-    fm=digitalform()
+    fm = digitalform()
     return render(request,'master/job.html',{'fm':fm})
 
 def careerform(request):
-    if request.method=="POST":
+    if request.method == "POST":
         return render(request,'master/jobformsubmit.html')
     else:
         return render(request,'master/ok.html')
@@ -146,7 +146,7 @@ def freesession(request):
         email = request.POST.get('email')
         field = request.POST.get('field')
         doubt = request.POST.get('doubt')
-        x=Freesession.objects.create(name=name,mobile=phone,email=email,field=field,doubt=doubt)
+        x=Freesession.objects.create(name = name, mobile = phone, email = email, field = field, doubt = doubt)
         x.save()
         return render(request,'master/thank.html')
     else:
@@ -160,20 +160,20 @@ def summer(request):
             mobile = form.cleaned_data.get("Mobile")
             email = form.cleaned_data.get("Email")
             degree = form.cleaned_data.get("Degree")
-            cv= request.FILES['resume']
-            checkbox1=request.POST.get('check1')
-            checkbox2=request.POST.get('check2')
+            cv = request.FILES['resume']
+            checkbox1 = request.POST.get('check1')
+            checkbox2 = request.POST.get('check2')
             print(name,mobile,email,degree,cv,checkbox1,checkbox2,type(checkbox1),type(checkbox2))
-            if checkbox1=="on":
-                c1=True
+            if checkbox1 == "on":
+                c1 = True
             else:
-                c1=False
+                c1 = False
             if checkbox2=="on":
-                c2=True
+                c2 = True
             else:
-                c2=False
+                c2 = False
             print(c1,c2)
-            x=Internship.objects.create(name=name,email=email,mobile=mobile,field=degree,cv=cv,checkbox1=c1,checkbox2=c2)
+            x=Internship.objects.create(name = name, email = email, mobile = mobile, field = degree, cv = cv, checkbox1 = c1, checkbox2 = c2)
             return render(request,'master/thank.html')
         else:
             print(form)

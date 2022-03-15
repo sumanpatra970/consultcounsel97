@@ -9,39 +9,39 @@ import razorpay
 from .models import Forum,Primemember,Transaction,Transcatid,Course,Court,Solution,Hirementor
 
 def discussion(request):
-    obj=Forum.objects.all()
-    fm=question_form()
+    obj = Forum.objects.all()
+    fm = question_form()
     return render(request,'master/discussion.html',{'v':obj,'form':fm})
 
 def reply(request,id):
-    if request.method=="POST":
-        new=answer_form(request.POST)
+    if request.method == "POST":
+        new = answer_form(request.POST)
         if new.is_valid():
-            st=new.cleaned_data['answer']
-            y=answer_form()
-            v=Forum.objects.get(pk=id)
-            v.answer=st
+            st = new.cleaned_data['answer']
+            y = answer_form()
+            v = Forum.objects.get(pk=id)
+            v.answer = st
             v.save()
-            t=v.question
-            o=v.answer
+            t = v.question
+            o = v.answer
             return render(request,'master/forum.html',{'o':o,'t':t,'fm':y,'g':id})
     else:
-        v=Forum.objects.get(pk=id)
-        t=v.question
-        o=v.answer
-        y=answer_form()
+        v = Forum.objects.get(pk=id)
+        t = v.question
+        o = v.answer
+        y = answer_form()
         return render(request,'master/forum.html',{'o':o,'t':t,'fm':y,'g':id})
 
 def redirect(request):
-    if request.method=="POST":
-        y=question_form(request.POST)
+    if request.method == "POST":
+        y = question_form(request.POST)
         if y.is_valid():
             y.save()
             return HttpResponseRedirect('/discussion')
         else:
             return HttpResponseRedirect('/discussion')
     else:
-            return HttpResponseRedirect('/discussion')
+        return HttpResponseRedirect('/discussion')
 
 def session(request):
     return render(request,'master/session.html')
@@ -133,7 +133,7 @@ def underconstruction(request):
     return render(request,'master/uc.html')
 
 def directpay(request):
-    name=request.user
+    name = request.user
     return render(request,'master/directpay.html',{'name':name,'request':request})
 
 def qrdirect(request):
@@ -145,16 +145,16 @@ def qrdirect(request):
         email = request.POST['email']
         plan = int(request.POST['plan'])
         refer = request.POST['refer']
-        concern= request.POST['concern']
-        if plan==1:
-            Amount=150
-        elif plan==2:
-            Amount=300
+        concern = request.POST['concern']
+        if plan == 1:
+            Amount = 150
+        elif plan == 2:
+            Amount = 300
         else:
-            Amount=400
-        x=Primemember.objects.create(Name=username,Mobileno=mobileno,Email=email,Plan=plan,Refered=refer,Query=concern)
+            Amount = 400
+        x = Primemember.objects.create(Name = username, Mobileno = mobileno, Email = email, Plan = plan, Refered = refer, Query = concern)
         x.save()
-        order_id=username+str(plan)+"dpscan_rt_spl"
+        order_id = username+str(plan)+"dpscan_rt_spl"
         transaction = Transaction.objects.create(made_by=username, amount=Amount,order_id=order_id)
         transaction.save()
         return render(request,'master/scan.html',{'amount':Amount})
@@ -170,8 +170,8 @@ def create_order(request):
         email = request.POST.get('email')
         product = request.POST.get('plan')
         refer = request.POST.get('refer')
-        concern= request.POST['concern']
-        x=Primemember.objects.create(Name=name,Mobileno=phone,Email=email,Plan=product,Refered=refer,Query=concern)
+        concern = request.POST['concern']
+        x = Primemember.objects.create(Name = name, Mobileno = phone, Email = email, Plan = product, Refered = refer, Query = concern)
         x.save()
         order_amount = 100
         if product == "1":
@@ -201,15 +201,15 @@ def create_order(request):
 
 def payment_status(request):
     response = request.POST
-    client = razorpay.Client(auth=("rzp_live_T029oczISLBkmx", "hnEDgqWj3jOiHqOZfcksiVRG"))
+    client = razorpay.Client(auth = ("rzp_live_T029oczISLBkmx", "hnEDgqWj3jOiHqOZfcksiVRG"))
     params_dict = {
         'razorpay_payment_id' : response['razorpay_payment_id'],
         'razorpay_order_id' : response['razorpay_order_id'],
         'razorpay_signature' : response['razorpay_signature']
     }
-    x=response['razorpay_payment_id']
-    y=response['razorpay_order_id']
-    v=Transcatid.objects.create(order_id=y,transcation_id=x)
+    x = response['razorpay_payment_id']
+    y = response['razorpay_order_id']
+    v = Transcatid.objects.create(order_id = y, transcation_id = x)
     v.save()
     try:
         status = client.utility.verify_payment_signature(params_dict)
@@ -221,17 +221,17 @@ def mentor(request):
     return render(request,'master/mentor.html')
 
 def mentorform(request):
-    if request.method=="POST":
-        fm=volunter_form(request.POST,request.FILES)
+    if request.method == "POST":
+        fm = volunter_form(request.POST,request.FILES)
         if fm.is_valid():
-            email=fm.cleaned_data['Email']
+            email = fm.cleaned_data['Email']
             fm.save()
             return render(request,'master/mentor-form.html')
         else:
-            fm=volunter_form()
+            fm = volunter_form()
             return render(request,'master/mentorform.html',{'fm':fm})
     else:
-        fm=volunter_form()
+        fm = volunter_form()
         return render(request,'master/mentorform.html',{'fm':fm})
 
 def startcourse(request):
@@ -255,8 +255,8 @@ def paydirect(request):
         lname= request.POST.get('lname')
         phone = request.POST.get('mobile')
         email = request.POST.get('email')
-        refered=request.POST.get('emaill')
-        x=Course.objects.create(name=fname+lname,email=email,mobile=phone,Refered=refered)
+        refered = request.POST.get('emaill')
+        x = Course.objects.create(name = fname+lname, email = email, mobile = phone, Refered = refered)
         x.save()
         return render(request,'master/scan.html')
 
@@ -275,7 +275,7 @@ def courtformsubmit(request):
         location = request.POST.get('location')
         phone = request.POST.get('mobile')
         email = request.POST.get('email')
-        x=Court.objects.create(name=fname,mobile=phone,email=email,location=location)
+        x = Court.objects.create(name = fname, mobile = phone, email = email, location = location)
         x.save()
     return render(request,'master/courtformsubmit.html')
 
@@ -287,7 +287,7 @@ def itsolutionrequest(request):
         name = request.POST.get('username')
         phone = request.POST.get('mobileno')
         email = request.POST.get('email')
-        x=Solution.objects.create(name=name,mobile=phone,email=email)
+        x = Solution.objects.create(name = name, mobile = phone, email = email)
         x.save()
         return render(request,'master/thank.html')
     else:
@@ -302,7 +302,7 @@ def hiringform(request):
         email = request.POST.get('lname')
         phone = request.POST.get('phone')
         area = request.POST.get('area')
-        x=Hirementor.objects.create(name=fname,email=email,area=area,mobile=phone)
+        x = Hirementor.objects.create(name = fname, email = email, area = area, mobile = phone)
         x.save()
         return render(request,'master/hiringform.html')
     else:

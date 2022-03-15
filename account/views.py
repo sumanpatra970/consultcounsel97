@@ -14,73 +14,73 @@ from django.template.loader import render_to_string
 from django.core.mail import send_mail, BadHeaderError
 
 def signup(request):
-    if request.method=="POST":
-        fm=account_creation_form(request.POST)
+    if request.method == "POST":
+        fm = account_creation_form(request.POST)
         if fm.is_valid():
             fm.save()
             return render(request,'master/account.html')
         else:
-            fm=account_creation_form()
+            fm = account_creation_form()
             messages.success(request,'username is already exists')
             return render(request, "master/signup.html", {'fm':fm})
     else:
-        fm=account_creation_form()
+        fm = account_creation_form()
         return render(request,'master/signup.html',{'fm':fm})
 
 def login(request):
-    if request.method=='POST':
-        user_fm=login_form(data=request.POST)
+    if request.method == 'POST':
+        user_fm = login_form(data=request.POST)
         if user_fm.is_valid():
-            uname=user_fm.cleaned_data['username']
-            upass=user_fm.cleaned_data['password']
-            user=auth.forms.authenticate(username=uname,password=upass)
+            uname = user_fm.cleaned_data['username']
+            upass = user_fm.cleaned_data['password']
+            user = auth.forms.authenticate(username=uname,password=upass)
             if user is not None:
                 auth.login(request,user)
                 return HttpResponseRedirect('account')
             else:
-                user_fm=login_form()
+                user_fm = login_form()
                 messages.success(request,'username or password is invalid')
                 return render(request, "master/login.html", {'fm':user_fm})
         else:
-            user_fm=login_form()
+            user_fm = login_form()
             messages.success(request,'username and password does not match')
             return render(request, "master/login.html", {'fm':user_fm})
     else:
-        user_fm=login_form()
+        user_fm = login_form()
         return render(request,'master/login.html',{'fm':user_fm})
 
 def account(request):
     if request.user.is_authenticated:
-        user_acc=user_change_form(instance=request.user)
+        user_acc = user_change_form(instance=request.user)
         return render(request,'master/account_detail.html',{'data':user_acc})
     else:
         return HttpResponseRedirect('login')
 
 def password(request):
-    if request.method=="POST":
-        fm=password_form(user=request.user,data=request.POST)
+    if request.method == "POST":
+        fm = password_form(user=request.user,data=request.POST)
         if fm.is_valid():
             fm.save()
             return HttpResponseRedirect('login')
         else:
-            fm=password_form(request.user)
+            fm = password_form(request.user)
             return render(request,'master/password.html',{'fm':fm})
     else:
-        fm=password_form(request.user)
+        fm = password_form(request.user)
         return render(request,'master/password.html',{'fm':fm})
 
 def editaccount(request):
     if request.user.is_authenticated:
-        if request.method=="POST":
-            user=user_change_form(request.POST,instance=request.user)
+        if request.method == "POST":
+            user = user_change_form(request.POST,instance=request.user)
             if user.is_valid():
                 user.save()
                 return HttpResponseRedirect('login')
             else:
-                user_acc=user_change_form(instance=request.user)
+                user_acc = user_change_form(instance=request.user)
                 return render(request,'master/editprofile.html',{'data':user_acc})
         else:
-            user_acc=user_change_form(instance=request.user)
+            user_acc = user_change_form(instance=request.user)
             return render(request,'master/editprofile.html',{'data':user_acc})
     else:
         return HttpResponseRedirect('login')
@@ -90,10 +90,10 @@ def logout(request):
     return HttpResponseRedirect('login')
 
 def passwordchange(request):
-    if request.method=="POST":
-        fm=name_form(data=request.POST)
+    if request.method == "POST":
+        fm = name_form(data=request.POST)
         if fm.is_valid():
-            upass=fm.cleaned_data['name']
+            upass = fm.cleaned_data['name']
             v=User.objects.get(username=upass)
             if v:
                 return HttpResponseRedirect('password')
@@ -102,7 +102,7 @@ def passwordchange(request):
         else:
             return render(request,'master/ok.html')
     else:
-        fm=name_form()
+        fm = name_form()
         return render(request,'master/resetpassword.html',{'fm':fm})
 
 def password_reset_request(request):
