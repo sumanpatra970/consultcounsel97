@@ -15,6 +15,10 @@ button{
    font-size: 16px;
    border: none;
 }
+.h1cls{
+   font-size: 16px;
+   font-weight: normal;
+}
 .dropdown {
    position: relative;
    display: inline-block;
