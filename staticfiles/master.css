@@ -113,7 +113,9 @@ a:visited {
 }
 .space{
    margin-bottom: 5px;
-   margin-left:10px;
+}
+.checkbox-space{
+   padding-left: 14px;
 }
 .space-button{
    margin-top:5px;
