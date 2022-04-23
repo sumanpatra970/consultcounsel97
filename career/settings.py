@@ -131,7 +131,4 @@ import socket
 
 socket.getaddrinfo('127.0.0.1',8000)
 
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
-
-MEDIA_URL = 'app/media/'
 
