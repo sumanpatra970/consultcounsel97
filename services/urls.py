@@ -33,5 +33,6 @@ urlpatterns = [
     path('itsolution-request-form',views.itsolutionrequest),
     path('hireme',views.hireme),
     path('hiring-mentor-done',views.hiringform),
-    path('underconstruction',views.underconstruction)
+    path('underconstruction',views.underconstruction),
+    path('freetraining',views.freetraining)
     ]

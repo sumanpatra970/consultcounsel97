@@ -307,3 +307,14 @@ def hiringform(request):
         return render(request,'master/hiringform.html')
     else:
         return render(request,'master/ok.html')
+
+def freetraining(request):
+    if request.method == 'POST':
+        name = request.POST.get('username')
+        phone = request.POST.get('mobileno')
+        email = request.POST.get('email')
+        x = Solution.objects.create(name = name, mobile = phone, email = email)
+        x.save()
+        return render(request,'master/thank.html')
+    else:
+        return render(request,'master/freetraining.html')
