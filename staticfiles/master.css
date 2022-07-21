@@ -52,6 +52,9 @@ button{
 .dropdown:hover .dropbtn {
    background-color:#1523e6;
 }
+.notification-color{
+   background-color: rgb(86, 9, 9);
+}
 a:link{
    color:#800000;
 }
@@ -125,12 +128,14 @@ a:visited {
    height:auto;
 }
 .notification{
-   color:#800000;
+   color:#f0e4e4;
    text-shadow: #999999;
    font-size: large;
    margin-top: 5px;
    margin-bottom: 5px;
    text-align: center;
+   margin-left: 5px;
+   margin-right: 5px;
 }
 .paytmqr{
    width:100%;
